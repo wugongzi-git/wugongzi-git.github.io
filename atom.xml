@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>说故事的五公子</title>
+  <icon>http://wgzblog.cn/icon.png</icon>
+  <subtitle>世间所有的相遇，都是久别重逢</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://wgzblog.cn/"/>
+  <updated>2020-04-13T09:08:45.249Z</updated>
+  <id>http://wgzblog.cn/</id>
+  
+  <author>
+    <name>wugongzi</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://wgzblog.cn/archives/4a17b156.html"/>
+    <id>http://wgzblog.cn/archives/4a17b156.html</id>
+    <published>2020-04-10T08:47:04.450Z</published>
+    <updated>2020-04-13T09:08:45.249Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;Hexo&lt;/a&gt;! This is your very first
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
