@@ -399,13 +399,33 @@ td {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  background-color: #eee;
-  background-image: linear-gradient(#fcfcfc, #eee);
-  border: 1px solid #d5d5d5;
-  border-radius: 3px;
-  font-size: 0.8125em;
-  right: 4px;
-  top: 8px;
+  color: #fff;
+  font-size: 14px;
+  right: 0;
+  top: 2px;
+}
+.highlight-container {
+  background: #21252b;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+  padding-top: 30px;
+}
+.highlight-container::before {
+  background: #fc625d;
+  border-radius: 50%;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  content: ' ';
+  height: 12px;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
+  width: 12px;
+}
+.highlight-container .highlight {
+  border-radius: 0 0 5px 5px;
+}
+.highlight-container .highlight .table-container {
+  border-radius: 0 0 5px 5px;
 }
 .highlight,
 pre {
@@ -1174,6 +1194,77 @@ pre .javascript .function {
 .use-motion .menu-item {
   opacity: 0;
 }
+.github-corner :hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+.github-corner svg {
+  border: 0;
+  color: #fff;
+  fill: #222;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+@media (max-width: 991px) {
+  .github-corner {
+    display: none;
+  }
+  .github-corner svg {
+    color: #222;
+    fill: #fff;
+  }
+  .github-corner .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+@-moz-keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@-webkit-keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@-o-keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
 .sidebar {
   background: #222;
   bottom: 0;
@@ -1239,7 +1330,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f79;
+  background: #6a71ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1476,9 +1567,10 @@ pre .javascript .function {
   width: 100%;
 }
 .with-love {
-  color: #808080;
+  color: #ff0000;
   display: inline-block;
   margin: 0 5px;
+  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 .powered-by,
 .theme-info {
@@ -2040,6 +2132,41 @@ pre .javascript .function {
 }
 #qr p {
   text-align: center;
+}
+#qr > div:hover p {
+  animation: roll 0.1s infinite linear;
+}
+@-moz-keyframes roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@-webkit-keyframes roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@-o-keyframes roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@keyframes roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
 }
 .post-copyright {
   background: var(--card-bg-color);
@@ -2850,7 +2977,7 @@ body {
   background-size: cover;
 }
 .content-wrap {
-  opacity: 0.9;
+  opacity: 0.92;
 }
 .sidebar {
   opacity: 0.9;
@@ -2860,4 +2987,256 @@ body {
 }
 .popup {
   opacity: 0.9;
+}
+.github-corner > svg {
+  fill: #70b7fd;
+  color: #fff;
+}
+.back-to-top.back-to-top-on {
+  display: none;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  background: rgba(255,255,255,0.1) none repeat scroll !important;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+.out-img-topic {
+  display: block;
+  max-height: 500px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+img.img-topic {
+  display: block;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+  padding: 0;
+  float: right;
+  clear: right;
+}
+.content {
+  border-radius: 20px;
+  background: rgba(255,255,255,0.8) none repeat scroll !important;
+}
+#heart {
+  animation: heartAnimate 1.33s ease-in-out infinite;
+}
+.with-love {
+  color: #f00;
+}
+.footer {
+  color: #fff;
+}
+.busuanzi-value {
+  color: #1890ff;
+}
+.header-inner {
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9) none repeat scroll !important;
+}
+.sidebar-inner {
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9) none repeat scroll !important;
+}
+.sidebar {
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9) none repeat scroll !important;
+}
+.comments {
+  border-radius: 20px;
+  background: rgba(255,255,255,0.92) none repeat scroll !important;
+}
+ul.popular-posts .popular-posts-item .popular-posts-title a {
+  color: #5073b8;
+  font-size: 18px;
+  font-weight: bold;
+}
+ul.popular-posts .popular-posts-item .popular-posts-title a:hover {
+  color: #a166ab;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #a166ab;
+}
+.popular-posts-header {
+  margin-top: 60px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  border-bottom: 1px solid #eee;
+}
+#qr {
+  animation: none;
+}
+.weixin-box {
+  position: absolute;
+  bottom: 43px;
+  left: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+}
+.weixin-menu {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  background: url("../../images/weixin.svg");
+  background-size: 32px 32px;
+}
+.weixin-hover {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 0px;
+  width: 0px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+  background: url("../../images/wugongzi.jpg");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 150px 150px;
+  transition: all 0.35s ease-in-out;
+  z-index: 1024;
+  opacity: 0;
+}
+.weixin-menu:hover .weixin-hover {
+  bottom: 24px;
+  left: 24px;
+  height: 170px;
+  width: 150px;
+  opacity: 1;
+}
+.weixin-description {
+  opacity: 0;
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  right: 5%;
+  color: #000;
+  font-size: 12px;
+  transition: all 0.35s cubic-bezier(1, 0, 0, 1);
+}
+.weixin-menu:hover .weixin-description {
+  opacity: 1;
+}
+.chinese-zodiac {
+  float: right;
+}
+@font-face {
+  font-family: 'chinese-zodiac';
+  font-display: swap;
+  src: url("../../fonts/chinese-zodiac/chinese-zodiac.eot");
+  src: url("../../fonts/chinese-zodiac/chinese-zodiac.eot") format('embedded-opentype'), url("../../fonts/chinese-zodiac/chinese-zodiac.woff2") format('woff2'), url("../../fonts/chinese-zodiac/chinese-zodiac.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.symbolic-animals {
+  display: inline-block;
+  font: normal normal normal 14px/1 chinese-zodiac;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-dragon:before {
+  content: '\e806';
+}
+.icon-tiger:before {
+  content: '\e809';
+}
+.icon-pig:before {
+  content: '\e810';
+}
+.icon-horse:before {
+  content: '\e813';
+}
+.icon-rat:before {
+  content: '\e816';
+}
+.icon-goat:before {
+  content: '\e818';
+}
+.icon-snake:before {
+  content: '\e820';
+}
+.icon-ox:before {
+  content: '\e822';
+}
+.icon-dog:before {
+  content: '\e825';
+}
+.icon-rabbit:before {
+  content: '\e826';
+}
+.icon-monkey:before {
+  content: '\e829';
+}
+.icon-rooster:before {
+  content: '\e82f';
+}
+span#inline-toc {
+  display: inline-block;
+  border-radius: 80% 100% 90% 20%;
+  background-color: #e3f2fd;
+  color: #555;
+  padding: 0.05em 0.4em;
+  margin: 2px 5px 2px 0px;
+  line-height: 1.5;
+}
+@-moz-keyframes heartAnimate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.1);
+  }
+}
+@-webkit-keyframes heartAnimate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.1);
+  }
+}
+@-o-keyframes heartAnimate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.1);
+  }
+}
+@keyframes heartAnimate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.9);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50%, 70% {
+    transform: scale(1.1);
+  }
 }

@@ -42,30 +42,39 @@ daovoice('update');
 
 
 
-  <meta name="description" content="世间美好与你环环相扣">
-<meta property="og:type" content="website">
-<meta property="og:title" content="说故事的五公子">
-<meta property="og:url" content="http://wgzblog.cn/index.html">
+  <meta name="description" content="一、安装NexTHexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 themes 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。 1.克隆最新版本在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码： 12$ cd your-hexo-site$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo-NexT配置个人博客">
+<meta property="og:url" content="http://wgzblog.cn/archives/ae7f7108.html">
 <meta property="og:site_name" content="说故事的五公子">
-<meta property="og:description" content="世间美好与你环环相扣">
+<meta property="og:description" content="一、安装NexTHexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 themes 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。 1.克隆最新版本在终端窗口下，定位到 Hexo 站点目录下。使用 Git checkout 代码： 12$ cd your-hexo-site$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411200230.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411201330.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411210224.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205415.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205544.png">
+<meta property="article:published_time" content="2020-04-14T13:39:21.000Z">
+<meta property="article:modified_time" content="2020-04-16T02:08:59.678Z">
 <meta property="article:author" content="wugongzi">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411200230.png">
 
-<link rel="canonical" href="http://wgzblog.cn/">
+<link rel="canonical" href="http://wgzblog.cn/archives/ae7f7108.html">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>说故事的五公子</title>
+  <title>Hexo-NexT配置个人博客 | 说故事的五公子</title>
   
 
 
@@ -252,9 +261,10 @@ daovoice('update');
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -270,10 +280,9 @@ daovoice('update');
       <meta itemprop="name" content="说故事的五公子">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/ae7f7108.html" class="post-title-link" itemprop="url">Hexo-NexT配置个人博客</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Hexo-NexT配置个人博客
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -293,6 +302,13 @@ daovoice('update');
               </span>
               <span class="post-meta-item-text">阅读次数：</span>
               <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
             </span>
   
   <span class="post-meta-item">
@@ -333,151 +349,311 @@ daovoice('update');
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="一、安装NexT"><a href="#一、安装NexT" class="headerlink" title="一、安装NexT"></a>一、安装NexT</h1><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
+        <h1 id="一、安装NexT"><a href="#一、安装NexT" class="headerlink" title="一、安装NexT"></a>一、安装NexT</h1><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
 <h2 id="1-克隆最新版本"><a href="#1-克隆最新版本" class="headerlink" title="1.克隆最新版本"></a>1.克隆最新版本</h2><p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>Git</code> checkout 代码：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">cd</span> <span class="string">your-hexo-site</span></span><br><span class="line"><span class="string">$</span> <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/iissnan/hexo-theme-next</span> <span class="string">themes/next</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/ae7f7108.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+
+
+
+<h2 id="2-直接下载"><a href="#2-直接下载" class="headerlink" title="2.直接下载"></a>2.直接下载</h2><ol>
+<li>前往 NexT 版本 <a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener external nofollow noreferrer">发布页面</a>。</li>
+<li>选择你所需要的版本，下载 Download 区域下的 Source Code (zip) 到本地。例如，下载 v0.4.0 版本：</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411200230.png" alt=""></p>
+<ol start="3">
+<li>解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（<code>hexo-theme-next-0.4.0</code>）更改为 <code>next</code>。</li>
+</ol>
+<h1 id="二、启用主题"><a href="#二、启用主题" class="headerlink" title="二、启用主题"></a>二、启用主题</h1><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件，Hexo目录下的_config.yml</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 我们最好使用 <code>hexo clean</code> 来清除 Hexo 的缓存。</p>
+<h1 id="三、验证主题"><a href="#三、验证主题" class="headerlink" title="三、验证主题"></a>三、验证主题</h1><p>到此，我们已经设置好了next主题，现在我们需要来验证一下我们的配置是否成功</p>
+<p>首先启动 Hexo 本地站点，并开启调试模式（即加上 <code>--debug</code>），整个命令是 <code>hexo s --debug</code>。 在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。 当命令行输出中提示出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http:<span class="comment">//0.0.0.0:4000/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></table></figure>
+
+<p>此时即可使用浏览器访问 <code>http://localhost:4000</code>，检查站点是否正确运行。</p>
+<blockquote>
+<p>当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411201330.png" alt=""></p>
+<h1 id="四、主题设置"><a href="#四、主题设置" class="headerlink" title="四、主题设置"></a>四、主题设置</h1><h2 id="1-选择Scheme"><a href="#1-选择Scheme" class="headerlink" title="1.选择Scheme"></a>1.选择Scheme</h2><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：</p>
+<ul>
+<li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
+<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
+<li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
+</ul>
+<p>Scheme 的切换通过更改 <strong>主题配置文件</strong>，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 <code>#</code> 去除即可。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Muse</span>   <span class="comment">#</span></span><br><span class="line"><span class="comment"># scheme: Mist     #菜单横着排列 菜单在上面</span></span><br><span class="line"><span class="comment"># scheme: Pisces     #菜单在左边</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-设置语言"><a href="#2-设置语言" class="headerlink" title="2.设置语言"></a>2.设置语言</h2><p>编辑 <strong>站点配置文件</strong>， 将 <code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-Cn</span></span><br></pre></td></tr></table></figure>
+
+<p>目前 NexT 支持的语言如以下表格所示：</p>
+<table>
+<thead>
+<tr>
+<th align="left">语言</th>
+<th align="left">代码</th>
+<th align="left">设定示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">English</td>
+<td align="left"><code>en</code></td>
+<td align="left"><code>language: en</code></td>
+</tr>
+<tr>
+<td align="left">简体中文</td>
+<td align="left"><code>zh-Cn</code></td>
+<td align="left"><code>language: zh-Cn</code></td>
+</tr>
+<tr>
+<td align="left">Français</td>
+<td align="left"><code>fr-FR</code></td>
+<td align="left"><code>language: fr-FR</code></td>
+</tr>
+<tr>
+<td align="left">Português</td>
+<td align="left"><code>pt</code></td>
+<td align="left"><code>language: pt</code> or <code>language: pt-BR</code></td>
+</tr>
+<tr>
+<td align="left">繁體中文</td>
+<td align="left"><code>zh-hk</code> 或者 <code>zh-tw</code></td>
+<td align="left"><code>language: zh-hk</code></td>
+</tr>
+<tr>
+<td align="left">Русский язык</td>
+<td align="left"><code>ru</code></td>
+<td align="left"><code>language: ru</code></td>
+</tr>
+<tr>
+<td align="left">Deutsch</td>
+<td align="left"><code>de</code></td>
+<td align="left"><code>language: de</code></td>
+</tr>
+<tr>
+<td align="left">日本語</td>
+<td align="left"><code>ja</code></td>
+<td align="left"><code>language: ja</code></td>
+</tr>
+<tr>
+<td align="left">Indonesian</td>
+<td align="left"><code>id</code></td>
+<td align="left"><code>language: id</code></td>
+</tr>
+<tr>
+<td align="left">Korean</td>
+<td align="left"><code>ko</code></td>
+<td align="left"><code>language: ko</code></td>
+</tr>
+</tbody></table>
+<h2 id="3-设置菜单"><a href="#3-设置菜单" class="headerlink" title="3.设置菜单"></a>3.设置菜单</h2><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="noopener external nofollow noreferrer">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
+<p>编辑 <strong>主题配置文件</strong>，修改以下内容：</p>
+<p>①、设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code>是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br></pre></td></tr></table></figure>
+
+<p>若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉</p>
+<p>NexT 默认的菜单项有（标注 的项表示需要手动创建这个页面）：</p>
+<table>
+<thead>
+<tr>
+<th align="left">键值</th>
+<th align="left">设定值</th>
+<th align="left">显示文本（简体中文）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">home</td>
+<td align="left"><code>home: /</code></td>
+<td align="left">主页</td>
+</tr>
+<tr>
+<td align="left">archives</td>
+<td align="left"><code>archives: /archives</code></td>
+<td align="left">归档页</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td align="left"><code>categories: /categories</code></td>
+<td align="left">分类页</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left"><code>tags: /tags</code></td>
+<td align="left">标签页</td>
+</tr>
+<tr>
+<td align="left">about</td>
+<td align="left"><code>about: /about</code></td>
+<td align="left">关于页面</td>
+</tr>
+<tr>
+<td align="left">commonweal</td>
+<td align="left"><code>commonweal: /404.html</code></td>
+<td align="left">公益 404</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：设置菜单时记得在Hexo的source目录下创建相对应的目录，否则会出现</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411210224.png" alt=""></p>
+<p>比如要创建标签文件夹，终端中输入（前提在<strong>Hexo</strong>文件路径下）：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
+
+<p>创建完目录后的页面再次打开是这样的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205415.png" alt=""></p>
+<p>编辑<code>Blog/source/categories</code>中<strong>index.md</strong>文件，添加<code>type: &quot;categories&quot;</code>，其他Menu也同理创建。</p>
+<p>添加type后的页面是这样的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205544.png" alt=""></p>
+</blockquote>
+<p>②、设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。</p>
+<p>以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Cn.yml</code>，在 <code>menu</code> 字段下添加一项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">首页</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">归档</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">分类</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">标签</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">关于</span></span><br><span class="line">  <span class="attr">search:</span> <span class="string">搜索</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">公益404</span></span><br><span class="line">  <span class="attr">something:</span> <span class="string">有料</span></span><br></pre></td></tr></table></figure>
+
+<p>③、设定菜单项的图标，对应的字段是 menu。 <code>||</code>后面的这是图标名称，<code>icon name</code> 是 <a href="http://fontawesome.io/" target="_blank" rel="noopener external nofollow noreferrer">Font Awesome</a> 图标的 名字。而 menu_settings中<code>icons</code> 可用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字） 的情况下，NexT 将会使用 作为图标。</p>
+<p> 请注意键值（如 <code>home</code>）的大小写要严格匹配</p>
+</blockquote>
+<h2 id="4-设置侧栏"><a href="#4-设置侧栏" class="headerlink" title="4.设置侧栏"></a>4.设置侧栏</h2><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 <strong>主题配置文件</strong> 中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
+<p>①、设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
+<ul>
+<li>left - 靠左放置</li>
+<li>right - 靠右放置</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">left</span></span><br></pre></td></tr></table></figure>
+
+<p>②、设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
+<ul>
+<li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
+<li><code>always</code> - 在所有页面中都显示</li>
+<li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
+<li><code>remove</code> - 完全移除</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">display:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-设置头像"><a href="#5-设置头像" class="headerlink" title="5.设置头像"></a>5.设置头像</h2><p>编辑 <strong>主题配置文件</strong>， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
+<table>
+<thead>
+<tr>
+<th align="left">地址</th>
+<th align="left">值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">完整的互联网 URI</td>
+<td align="left"><code>http://example.com/avatar.png</code></td>
+</tr>
+<tr>
+<td align="left">站点内的地址</td>
+<td align="left">将头像放置主题目录下的 <code>source/uploads/</code> （新建 uploads 目录若不存在） 配置为：<code>avatar: /uploads/avatar.png</code>或者 放置在 <code>source/images/</code> 目录下 配置为：<code>avatar: /images/avatar.png</code></td>
+</tr>
+</tbody></table>
+<p>头像设置示例</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">avatar:</span> <span class="string">http://example.com/avatar.png</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-设置作者昵称"><a href="#6-设置作者昵称" class="headerlink" title="6.设置作者昵称"></a>6.设置作者昵称</h2><p>编辑 <strong>站点配置文件</strong>， 设置 <code>author</code> 为你的昵称。</p>
+<h2 id="7-站点描述"><a href="#7-站点描述" class="headerlink" title="7.站点描述"></a>7.站点描述</h2><p>编辑 <strong>站点配置文件</strong>， 设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+
     </div>
 
     <div>
       
-    </div>
-
+          <div>
     
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wgzblog.cn/archives/4a17b156.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="wugongzi">
-      <meta itemprop="description" content="世间美好与你环环相扣">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="说故事的五公子">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/archives/4a17b156.html" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-10 08:47:04" itemprop="dateCreated datePublished" datetime="2020-04-10T08:47:04Z">2020-04-10</time>
-            </span>
-
-          
-            <span id="/archives/4a17b156.html" class="post-meta-item leancloud_visitors" data-flag-title="Hello World" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/archives/4a17b156.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/archives/4a17b156.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br/><span style="text-align: center" id="jrsc" >正在加载今日诗词....</span>
-<br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>506</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
+        <div style="text-align:left;font-size:22px;letter-spacing: 10px;user-select: none;color: #bbb;">
+<p style="text-align:center;color: #ccc;">----------- 本文结束啦<i class="fa fa-star"></i>感谢您阅读 -----------</p>
+<p><b>我的传送门：</b><a href="https://www.cnblogs.com/wugongzi/" target="_blank" rel="noopener external nofollow noreferrer">博客</a>、<a href="https://www.jianshu.com/u/dff90196c795" target="_blank" rel="noopener external nofollow noreferrer">简书</a>、<a href="https://github.com/wugongzi-git" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a></p>
         </div>
-      </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+</div>
       
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener external nofollow noreferrer">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener external nofollow noreferrer">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    </div>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener external nofollow noreferrer">Writing</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/archives/4a17b156.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
+    
+    
+    
+      
+  <div class="popular-posts-header">推荐文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\archives\4a17b156.html" rel="bookmark">Hello World</a></div>
+    </li>
+  </ul>
+
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="wugongzi 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
         
-      
-    </div>
 
-    <div>
-      
-    </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>wugongzi
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://wgzblog.cn/archives/ae7f7108.html" title="Hexo-NexT配置个人博客">http://wgzblog.cn/archives/ae7f7108.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-    
-    
-    
+ 
+      
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 工具</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/archives/4a17b156.html" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -524,6 +700,7 @@ daovoice('update');
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装NexT"><span class="nav-number">1.</span> <span class="nav-text">一、安装NexT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-克隆最新版本"><span class="nav-number">1.1.</span> <span class="nav-text">1.克隆最新版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-直接下载"><span class="nav-number">1.2.</span> <span class="nav-text">2.直接下载</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、启用主题"><span class="nav-number">2.</span> <span class="nav-text">二、启用主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、验证主题"><span class="nav-number">3.</span> <span class="nav-text">三、验证主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、主题设置"><span class="nav-number">4.</span> <span class="nav-text">四、主题设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-选择Scheme"><span class="nav-number">4.1.</span> <span class="nav-text">1.选择Scheme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-设置语言"><span class="nav-number">4.2.</span> <span class="nav-text">2.设置语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-设置菜单"><span class="nav-number">4.3.</span> <span class="nav-text">3.设置菜单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-设置侧栏"><span class="nav-number">4.4.</span> <span class="nav-text">4.设置侧栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-设置头像"><span class="nav-number">4.5.</span> <span class="nav-text">5.设置头像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-设置作者昵称"><span class="nav-number">4.6.</span> <span class="nav-text">6.设置作者昵称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-站点描述"><span class="nav-number">4.7.</span> <span class="nav-text">7.站点描述</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1044,7 +1221,7 @@ if(canvas.getContext){
       quicklink({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'http://wgzblog.cn/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'http://wgzblog.cn/archives/ae7f7108.html',]
       });
       });
   </script>

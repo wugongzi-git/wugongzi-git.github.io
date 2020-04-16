@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wgzblog.cn/"/>
-  <updated>2020-04-13T09:08:45.249Z</updated>
+  <updated>2020-04-16T02:08:59.678Z</updated>
   <id>http://wgzblog.cn/</id>
   
   <author>
@@ -17,21 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo-NexT配置个人博客</title>
+    <link href="http://wgzblog.cn/archives/ae7f7108.html"/>
+    <id>http://wgzblog.cn/archives/ae7f7108.html</id>
+    <published>2020-04-14T13:39:21.000Z</published>
+    <updated>2020-04-16T02:08:59.678Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、安装NexT&quot;&gt;&lt;a href=&quot;#一、安装NexT&quot; class=&quot;headerlink&quot; title=&quot;一、安装NexT&quot;&gt;&lt;/a&gt;一、安装NexT&lt;/h1&gt;&lt;p&gt;Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 &lt;code&gt;themes&lt;/code&gt; 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。&lt;/p&gt;
+&lt;h2 id=&quot;1-克隆最新版本&quot;&gt;&lt;a href=&quot;#1-克隆最新版本&quot; class=&quot;headerlink&quot; title=&quot;1.克隆最新版本&quot;&gt;&lt;/a&gt;1.克隆最新版本&lt;/h2&gt;&lt;p&gt;在终端窗口下，定位到 Hexo 站点目录下。使用 &lt;code&gt;Git&lt;/code&gt; checkout 代码：&lt;/p&gt;
+&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;your-hexo-site&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;https://github.com/iissnan/hexo-theme-next&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;themes/next&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="工具" scheme="http://wgzblog.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://wgzblog.cn/archives/4a17b156.html"/>
     <id>http://wgzblog.cn/archives/4a17b156.html</id>
     <published>2020-04-10T08:47:04.450Z</published>
-    <updated>2020-04-13T09:08:45.249Z</updated>
+    <updated>2020-04-14T02:52:00.630Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;Hexo&lt;/a&gt;! This is your very first
-        
-      
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
