@@ -687,6 +687,9 @@ pre .javascript .function {
   flex-grow: 1;
   list-style-type: none;
   border-radius: 0 0 0 0;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 }
 @media (max-width: 413px) {
   .post-body .tabs ul.nav-tabs li.tab,
@@ -1330,7 +1333,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #111334;
+  background: #fef712;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3021,6 +3024,22 @@ img.img-topic {
   border-radius: 20px;
   background: rgba(255,255,255,0.8) none repeat scroll !important;
 }
+.posts-expand .post-body .gallery-column a img {
+  height: 250px;
+  width: 300px;
+  object-fit: cover;
+}
+.posts-expand {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 14px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 14px rgba(202,203,204,0.5);
+}
+.page {
+  border-radius: 20px;
+  background: rgba(255,255,255,0.8) none repeat scroll !important;
+}
 #heart {
   animation: heartAnimate 1.33s ease-in-out infinite;
 }
@@ -3183,6 +3202,113 @@ span#inline-toc {
   padding: 0.05em 0.4em;
   margin: 2px 5px 2px 0px;
   line-height: 1.5;
+}
+.posts-collapse .collection-title h1 {
+  margin-left: -20px;
+  width: 33%;
+  padding: 5px 20px 5px 0;
+  text-align: right;
+  background: rgba(255,255,255,0.3);
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+  transition: all 1s cubic-bezier(0.17, 0.08, 0.04, 0.99);
+}
+.posts-collapse .collection-title h1:hover {
+  width: 80%;
+  background: rgba(255,255,255,0.5);
+}
+.posts-collapse .collection-year h1 {
+  margin-left: -20px;
+  width: 33%;
+  padding: 5px 20px 5px 0;
+  text-align: right;
+  background: rgba(255,255,255,0.3);
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+  transition: all 1s cubic-bezier(0.17, 0.08, 0.04, 0.99);
+}
+.posts-collapse .collection-year h1:hover {
+  width: 80%;
+  background: rgba(255,255,255,0.5);
+}
+.links-of-blogroll-title {
+  font-size: 16px;
+}
+.post-nav {
+  border-top: 1px solid #58b2dc;
+}
+.posts-expand .post-title:hover {
+  border-left: #7db9de 20px solid;
+  padding-left: 15px;
+  cursor: pointer;
+  transition: border-width 0.3s linear 0.1s, color 0.2s linear 0.3s;
+}
+.post-nav {
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+.post-nav-item {
+  flex: 1;
+}
+.post-nav-item a {
+  color: #5073b8;
+  font-weight: bold;
+  font-size: 16px;
+}
+.post-nav-item a:hover {
+  color: #a166ab;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid #a166ab;
+}
+.post-nav-item .fa {
+  font-size: 0.75em;
+}
+.posts-expand .post-tags {
+  text-align: center;
+}
+.posts-expand .post-tags a {
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-family: sans-serif;
+  transition: 0.2s ease-out;
+  padding: 3px 5px;
+  margin: 5px;
+  background: #f5f5f5;
+  border-bottom: none;
+  border-radius: 15px;
+}
+.posts-expand .post-tags a:hover {
+  background: rgba(100,154,182,0.902);
+  color: #fff;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  -moz-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.posts-expand .post-title:hover {
+  border-left: #7db9de 20px solid;
+  padding-left: 15px;
+  cursor: pointer;
+  transition: border-width 0.3s linear 0.1s, color 0.2s linear 0.3s;
+}
+.tag-cloud a {
+  box-shadow: 0 1px 3px #6f42c1, 0 1px 2px #d9534f;
+  padding: 2px 10px;
+  margin: 8px;
+  background: rgba(193,66,92,0);
+  border-bottom: none;
+  border-radius: 20px;
+}
+.post-body .note:not(.no-icon)::before {
+  font-family: 'FontAwesome';
+  font-size: larger;
+  left: 15px;
+  position: absolute;
+  top: 15px;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {

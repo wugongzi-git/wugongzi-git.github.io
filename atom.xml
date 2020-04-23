@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>说故事的五公子</title>
-  <icon>http://wgzblog.cn/icon.png</icon>
+  <icon>http://www.wgzblog.cn/icon.png</icon>
   <subtitle>世间所有的相遇，都是久别重逢</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://wgzblog.cn/"/>
-  <updated>2020-04-16T02:08:59.678Z</updated>
-  <id>http://wgzblog.cn/</id>
+  <link href="http://www.wgzblog.cn/"/>
+  <updated>2020-04-16T15:55:41.189Z</updated>
+  <id>http://www.wgzblog.cn/</id>
   
   <author>
     <name>wugongzi</name>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo-NexT Tag 插件的使用</title>
+    <link href="http://www.wgzblog.cn/archives/ae7f7109.html"/>
+    <id>http://www.wgzblog.cn/archives/ae7f7109.html</id>
+    <published>2020-04-16T23:50:29.000Z</published>
+    <updated>2020-04-16T15:55:41.189Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Tag Plugin 是一种使 Hexo 支持特殊样式内容的方法。例如，我们无法在标准 Markdown 中显示具有自定义尺寸的图像。然后我们可以使用标签插件来解决它。 Hexo 有很多可以帮助用户的标签。 Hexo 还具有主题接口，使主题能够创建自己的标签。&lt;/p&gt;
+&lt;h2 id=&quot;文本居中引用-Centered-Quote&quot;&gt;&lt;a href=&quot;#文本居中引用-Centered-Quote&quot; class=&quot;headerlink&quot; title=&quot;文本居中引用 - Centered Quote&quot;&gt;&lt;/a&gt;文本居中引用 - Centered Quote&lt;/h2&gt;&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% cq %&amp;#125;世间所有的相遇，都是久别重逢&amp;#123;% endcq %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;显示效果：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://www.wgzblog.cn/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Hexo" scheme="http://www.wgzblog.cn/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo-NexT配置个人博客</title>
-    <link href="http://wgzblog.cn/archives/ae7f7108.html"/>
-    <id>http://wgzblog.cn/archives/ae7f7108.html</id>
+    <link href="http://www.wgzblog.cn/archives/ae7f7108.html"/>
+    <id>http://www.wgzblog.cn/archives/ae7f7108.html</id>
     <published>2020-04-14T13:39:21.000Z</published>
-    <updated>2020-04-16T02:08:59.678Z</updated>
+    <updated>2020-04-16T15:52:29.379Z</updated>
     
     <summary type="html">
     
@@ -32,17 +57,19 @@
     </summary>
     
     
+      <category term="软件" scheme="http://www.wgzblog.cn/categories/%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="工具" scheme="http://wgzblog.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Hexo" scheme="http://www.wgzblog.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://wgzblog.cn/archives/4a17b156.html"/>
-    <id>http://wgzblog.cn/archives/4a17b156.html</id>
+    <link href="http://www.wgzblog.cn/archives/4a17b156.html"/>
+    <id>http://www.wgzblog.cn/archives/4a17b156.html</id>
     <published>2020-04-10T08:47:04.450Z</published>
-    <updated>2020-04-14T02:52:00.630Z</updated>
+    <updated>2020-04-16T15:48:11.042Z</updated>
     
     <summary type="html">
     
