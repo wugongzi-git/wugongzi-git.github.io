@@ -1333,7 +1333,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fef712;
+  background: #ffff41;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3309,6 +3309,38 @@ span#inline-toc {
   left: 15px;
   position: absolute;
   top: 15px;
+}
+.posts-collapse .collection-title {
+  font-size: 1.125em;
+  position: relative;
+}
+.posts-collapse .collection-title h2 {
+  margin-left: -20px;
+  width: 33%;
+  padding: 5px 20px 5px 0;
+  text-align: right;
+  background: rgba(255,255,255,0.3);
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+  transition: all 1s cubic-bezier(0.17, 0.08, 0.04, 0.99);
+}
+.posts-collapse .collection-title h2:hover {
+  width: 80%;
+  background: rgba(255,255,255,0.5);
+}
+.posts-collapse .collection-year h2 {
+  margin-left: -20px;
+  width: 33%;
+  padding: 5px 20px 5px 0;
+  text-align: right;
+  background: rgba(255,255,255,0.3);
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+  transition: all 1s cubic-bezier(0.17, 0.08, 0.04, 0.99);
+}
+.posts-collapse .collection-year h2:hover {
+  width: 80%;
+  background: rgba(255,255,255,0.5);
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
