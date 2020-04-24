@@ -352,7 +352,7 @@
         </style>
         <div class="links-content">
 
-             <div class="no-icon note warning"><div class="link-info">👨‍🎓 没有不劳而获的工作，更没有坐享其成的收获</div></div>
+             <div class="no-icon note warning"><div class="link-info">👨‍🎓 大佬们 ———— 没有不劳而获的工作，更没有坐享其成的收获</div></div>
             <div class="link-navigation">
                     
 
@@ -395,7 +395,25 @@
 
 <div class="note success">
             <h2 id="申请方式"><a href="#申请方式" class="headerlink" title="申请方式"></a>申请方式</h2><p>然后按照以下格式给我发邮件，待博主为您添上友链</p><p>也请将本站的友链添加到您的友链，非常感谢</p><blockquote><p>网站名称：说故事的五公子</p><p>网站地址：<a href="http://www.wgzblog.cn/">http://www.wgzblog.cn/</a></p><p>网站描述：世间所有的相遇，都是久别重逢</p><p>网站 Logo / 头像：<a href="http://www.wgzblog.cn/images/avatar.jpg">http://www.wgzblog.cn/images/avatar.jpg</a></p></blockquote>
-          </div>
+          </div><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
         </div>
 
@@ -1010,7 +1028,7 @@ if(canvas.getContext){
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
+    var guest = 'nick,mail';
     guest = guest.split(',').filter(item => {
       return GUEST.includes(item);
     });
@@ -1021,7 +1039,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       appId      : 'ri90Dqj7mp3weJnTKuJK9sqL-gzGzoHsz',
       appKey     : 'DomAxHzAhHaRX5uxqdPO9LOH',
       placeholder: "写下你的评论...",
-      avatar     : 'mm',
+      avatar     : 'robohash',
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : true,

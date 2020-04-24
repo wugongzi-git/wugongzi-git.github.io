@@ -668,7 +668,25 @@
 
 
 <p>​        </p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
       </div>
       
       
@@ -1274,7 +1292,7 @@ if(canvas.getContext){
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
+    var guest = 'nick,mail';
     guest = guest.split(',').filter(item => {
       return GUEST.includes(item);
     });
@@ -1285,7 +1303,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       appId      : 'ri90Dqj7mp3weJnTKuJK9sqL-gzGzoHsz',
       appKey     : 'DomAxHzAhHaRX5uxqdPO9LOH',
       placeholder: "写下你的评论...",
-      avatar     : 'mm',
+      avatar     : 'robohash',
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : true,

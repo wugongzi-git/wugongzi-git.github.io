@@ -5,7 +5,7 @@
     <url>/archives/ae7f7109.html</url>
     <content><![CDATA[<p>Tag Plugin 是一种使 Hexo 支持特殊样式内容的方法。例如，我们无法在标准 Markdown 中显示具有自定义尺寸的图像。然后我们可以使用标签插件来解决它。 Hexo 有很多可以帮助用户的标签。 Hexo 还具有主题接口，使主题能够创建自己的标签。</p>
 <h2 id="文本居中引用-Centered-Quote"><a href="#文本居中引用-Centered-Quote" class="headerlink" title="文本居中引用 - Centered Quote"></a>文本居中引用 - Centered Quote</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;世间所有的相遇，都是久别重逢&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% cq %}世间所有的相遇，都是久别重逢{% endcq %}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>显示效果：</p>
 <blockquote class="blockquote-center">
@@ -14,10 +14,10 @@
           </blockquote>
 
 <h2 id="提示块-Note"><a href="#提示块-Note" class="headerlink" title="提示块 - Note"></a>提示块 - Note</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">default 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% note default %}</span><br><span class="line">default 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note primary %}</span><br><span class="line">primary 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note success %}</span><br><span class="line">success 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note info %}</span><br><span class="line">info 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note warning %}</span><br><span class="line">warning 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note danger %}</span><br><span class="line">danger 提示块标签</span><br><span class="line">{% endnote %}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>主题配置文件中可以修改风格：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Note tag (bs-callout).</span><br><span class="line">note:</span><br><span class="line">  # Note tag style values:</span><br><span class="line">  #  - simple    bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span><br><span class="line">  #  - disabled  disable all CSS styles import of note tag.</span><br><span class="line">  # 风格</span><br><span class="line">  style: flat</span><br><span class="line">  # 要不要图标</span><br><span class="line">  icons: true</span><br><span class="line">  # 圆角矩形</span><br><span class="line">  border_radius: 3</span><br><span class="line">  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied to label tag variables. This option can work with disabled note tag.</span><br><span class="line">  light_bg_offset: 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># Note tag (bs-callout).</span><br><span class="line">note:</span><br><span class="line">  # Note tag style values:</span><br><span class="line">  #  - simple    bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span><br><span class="line">  #  - disabled  disable all CSS styles import of note tag.</span><br><span class="line">  # 风格</span><br><span class="line">  style: flat</span><br><span class="line">  # 要不要图标</span><br><span class="line">  icons: true</span><br><span class="line">  # 圆角矩形</span><br><span class="line">  border_radius: 3</span><br><span class="line">  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied to label tag variables. This option can work with disabled note tag.</span><br><span class="line">  light_bg_offset: 0</span><br></pre></td></tr></tbody></table></figure>
 
 <p>显示效果：</p>
 <div class="note default">
@@ -45,24 +45,24 @@
           </div>
 
 <h2 id="标签-Label"><a href="#标签-Label" class="headerlink" title="标签 - Label"></a>标签 - Label</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% label default@默认 %&#125; &#123;% label primary@主要 %&#125; &#123;% label success@成功 %&#125; &#123;% label info@信息 %&#125; &#123;% label warning@警告 %&#125; &#123;% label danger@危险 %&#125; </span><br><span class="line">&#123;% label success@这是成功的信息%&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% label default@默认 %} {% label primary@主要 %} {% label success@成功 %} {% label info@信息 %} {% label warning@警告 %} {% label danger@危险 %} </span><br><span class="line">{% label success@这是成功的信息%}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>显示效果：</p>
 <span class="label default">默认</span> <span class="label primary">主要</span> <span class="label success">成功</span> <span class="label info">信息</span> <span class="label warning">警告</span> <span class="label danger">危险</span> 
 <span class="label success">这是成功的信息</span>
 
 <h2 id="选项卡-Tabs"><a href="#选项卡-Tabs" class="headerlink" title="选项卡 - Tabs"></a>选项卡 - Tabs</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% tabs tab,1 %&#125; 名字为tab，默认在第1个选项卡，如果是-1则隐藏</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 1** </span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 2**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab A --&gt;</span><br><span class="line">**选项卡 3** 名字为A</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% tabs tab,1 %} 名字为tab，默认在第1个选项卡，如果是-1则隐藏</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 1** </span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 2**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab A --&gt;</span><br><span class="line">**选项卡 3** 名字为A</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">{% endtabs %}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>主题配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Tabs tag</span><br><span class="line">tabs:</span><br><span class="line">  enable: true</span><br><span class="line">  transition:</span><br><span class="line">    tabs: true</span><br><span class="line">    labels: true</span><br><span class="line">  border_radius: 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># Tabs tag</span><br><span class="line">tabs:</span><br><span class="line">  enable: true</span><br><span class="line">  transition:</span><br><span class="line">    tabs: true</span><br><span class="line">    labels: true</span><br><span class="line">  border_radius: 0</span><br></pre></td></tr></tbody></table></figure>
 
 <p>显示效果：</p>
 <div class="tabs" id="tab"><ul class="nav-tabs"><li class="tab active"><a href="#tab-1">tab 1</a></li><li class="tab"><a href="#tab-2">tab 2</a></li><li class="tab"><a href="#tab-3">A</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-1"><p><strong>选项卡 1</strong> </p></div><div class="tab-pane" id="tab-2"><p><strong>选项卡 2</strong></p></div><div class="tab-pane" id="tab-3"><p><strong>选项卡 3</strong> 名字为A</p></div></div></div>
 
 <p><strong>选项卡 3</strong> 名字为 A</p>
 <h2 id="按钮-Button"><a href="#按钮-Button" class="headerlink" title="按钮 - Button"></a>按钮 - Button</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% button url, text, icon [class], [title] %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% button url, text, icon [class], [title] %}</span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
 <li><code>url</code> : 绝对或相对 URL</li>
@@ -73,7 +73,7 @@
 </ul>
 <p>注意：最好添加 `` 标签，测试时没加 div，下面显示不完全，加上非常美观。</p>
 <p>一个示例：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;&#123;% button https:&#x2F;&#x2F;wgzblog.cn&#x2F; ,首页,home fa-fw,这是五公子的博客首页%&#125;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">&lt;div&gt;{% button https://wgzblog.cn/ ,首页,home fa-fw,这是五公子的博客首页%}&lt;/div&gt;</span><br></pre></td></tr></tbody></table></figure>
 
 <p>显示效果：</p>
 <div><a class="btn" href="https://wgzblog.cn/ " target="_blank" rel="noopener external nofollow noreferrer" title="这是五公子的个人博客首页">
@@ -87,7 +87,25 @@
             <i class="fa fa-film fa-fw"></i>观影
           </a> <a class="btn" href="https://wgzblog.cn/books/ " target="_blank" rel="noopener external nofollow noreferrer" title="豆瓣读书">
             <i class="fa fa-book fa-fw"></i>阅读
-          </a></div></div>]]></content>
+          </a></div></div><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
       <categories>
         <category>软件</category>
       </categories>
@@ -96,29 +114,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/archives/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener external nofollow noreferrer">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener external nofollow noreferrer">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener external nofollow noreferrer">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener external nofollow noreferrer">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener external nofollow noreferrer">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener external nofollow noreferrer">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hexo-NexT配置个人博客</title>
     <url>/archives/ae7f7108.html</url>
     <content><![CDATA[<h1 id="一、安装NexT"><a href="#一、安装NexT" class="headerlink" title="一、安装NexT"></a>一、安装NexT</h1><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
 <h2 id="1-克隆最新版本"><a href="#1-克隆最新版本" class="headerlink" title="1.克隆最新版本"></a>1.克隆最新版本</h2><p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>Git</code> checkout 代码：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">cd</span> <span class="string">your-hexo-site</span></span><br><span class="line"><span class="string">$</span> <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/iissnan/hexo-theme-next</span> <span class="string">themes/next</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">cd</span> <span class="string">your-hexo-site</span></span><br><span class="line"><span class="string">$</span> <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/iissnan/hexo-theme-next</span> <span class="string">themes/next</span></span><br></pre></td></tr></tbody></table></figure>
 
 
 
@@ -131,14 +131,14 @@
 <li>解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（<code>hexo-theme-next-0.4.0</code>）更改为 <code>next</code>。</li>
 </ol>
 <h1 id="二、启用主题"><a href="#二、启用主题" class="headerlink" title="二、启用主题"></a>二、启用主题</h1><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件，Hexo目录下的_config.yml</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></tbody></table></figure>
 
 
 
 <p>到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 我们最好使用 <code>hexo clean</code> 来清除 Hexo 的缓存。</p>
 <h1 id="三、验证主题"><a href="#三、验证主题" class="headerlink" title="三、验证主题"></a>三、验证主题</h1><p>到此，我们已经设置好了next主题，现在我们需要来验证一下我们的配置是否成功</p>
 <p>首先启动 Hexo 本地站点，并开启调试模式（即加上 <code>--debug</code>），整个命令是 <code>hexo s --debug</code>。 在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。 当命令行输出中提示出：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">INFO  Hexo is running at http:<span class="comment">//0.0.0.0:4000/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">INFO  Hexo is running at http:<span class="comment">//0.0.0.0:4000/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>此时即可使用浏览器访问 <code>http://localhost:4000</code>，检查站点是否正确运行。</p>
 <blockquote>
@@ -152,10 +152,10 @@
 <li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
 </ul>
 <p>Scheme 的切换通过更改 <strong>主题配置文件</strong>，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 <code>#</code> 去除即可。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Muse</span>   <span class="comment">#</span></span><br><span class="line"><span class="comment"># scheme: Mist     #菜单横着排列 菜单在上面</span></span><br><span class="line"><span class="comment"># scheme: Pisces     #菜单在左边</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Muse</span>   <span class="comment">#</span></span><br><span class="line"><span class="comment"># scheme: Mist     #菜单横着排列 菜单在上面</span></span><br><span class="line"><span class="comment"># scheme: Pisces     #菜单在左边</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="2-设置语言"><a href="#2-设置语言" class="headerlink" title="2.设置语言"></a>2.设置语言</h2><p>编辑 <strong>站点配置文件</strong>， 将 <code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-Cn</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-Cn</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>目前 NexT 支持的语言如以下表格所示：</p>
 <table>
@@ -220,7 +220,7 @@
 <h2 id="3-设置菜单"><a href="#3-设置菜单" class="headerlink" title="3.设置菜单"></a>3.设置菜单</h2><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="noopener external nofollow noreferrer">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
 <p>编辑 <strong>主题配置文件</strong>，修改以下内容：</p>
 <p>①、设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code>是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉</p>
 <p>NexT 默认的菜单项有（标注 的项表示需要手动创建这个页面）：</p>
@@ -267,20 +267,20 @@
 <p>注意：设置菜单时记得在Hexo的source目录下创建相对应的目录，否则会出现</p>
 <p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411210224.png" alt=""></p>
 <p>比如要创建标签文件夹，终端中输入（前提在<strong>Hexo</strong>文件路径下）：</p>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tbody><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"tags"</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>创建完目录后的页面再次打开是这样的</p>
 <p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205415.png" alt=""></p>
-<p>编辑<code>Blog/source/categories</code>中<strong>index.md</strong>文件，添加<code>type: &quot;categories&quot;</code>，其他Menu也同理创建。</p>
+<p>编辑<code>Blog/source/categories</code>中<strong>index.md</strong>文件，添加<code>type: "categories"</code>，其他Menu也同理创建。</p>
 <p>添加type后的页面是这样的</p>
 <p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205544.png" alt=""></p>
 </blockquote>
 <p>②、设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。</p>
 <p>以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Cn.yml</code>，在 <code>menu</code> 字段下添加一项：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">首页</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">归档</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">分类</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">标签</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">关于</span></span><br><span class="line">  <span class="attr">search:</span> <span class="string">搜索</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">公益404</span></span><br><span class="line">  <span class="attr">something:</span> <span class="string">有料</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">首页</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">归档</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">分类</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">标签</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">关于</span></span><br><span class="line">  <span class="attr">search:</span> <span class="string">搜索</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">公益404</span></span><br><span class="line">  <span class="attr">something:</span> <span class="string">有料</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>③、设定菜单项的图标，对应的字段是 menu。 <code>||</code>后面的这是图标名称，<code>icon name</code> 是 <a href="http://fontawesome.io/" target="_blank" rel="noopener external nofollow noreferrer">Font Awesome</a> 图标的 名字。而 menu_settings中<code>icons</code> 可用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
 
 <blockquote>
 <p> 在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字） 的情况下，NexT 将会使用 作为图标。</p>
@@ -292,7 +292,7 @@
 <li>left - 靠左放置</li>
 <li>right - 靠右放置</li>
 </ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">left</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">left</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>②、设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
 <ul>
@@ -301,7 +301,7 @@
 <li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
 <li><code>remove</code> - 完全移除</li>
 </ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">display:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">display:</span> <span class="string">post</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="5-设置头像"><a href="#5-设置头像" class="headerlink" title="5.设置头像"></a>5.设置头像</h2><p>编辑 <strong>主题配置文件</strong>， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
 <table>
@@ -321,16 +321,70 @@
 </tr>
 </tbody></table>
 <p>头像设置示例</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">avatar:</span> <span class="string">http://example.com/avatar.png</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">avatar:</span> <span class="string">http://example.com/avatar.png</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h2 id="6-设置作者昵称"><a href="#6-设置作者昵称" class="headerlink" title="6.设置作者昵称"></a>6.设置作者昵称</h2><p>编辑 <strong>站点配置文件</strong>， 设置 <code>author</code> 为你的昵称。</p>
 <h2 id="7-站点描述"><a href="#7-站点描述" class="headerlink" title="7.站点描述"></a>7.站点描述</h2><p>编辑 <strong>站点配置文件</strong>， 设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
-]]></content>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
       <categories>
         <category>软件</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/archives/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener external nofollow noreferrer">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener external nofollow noreferrer">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener external nofollow noreferrer">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener external nofollow noreferrer">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener external nofollow noreferrer">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener external nofollow noreferrer">Deployment</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
   </entry>
 </search>
