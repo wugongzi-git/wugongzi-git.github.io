@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.wgzblog.cn/"/>
-  <updated>2020-04-16T15:55:41.189Z</updated>
+  <updated>2020-05-06T12:00:02.882Z</updated>
   <id>https://www.wgzblog.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你的见识决定你的人生</title>
+    <link href="https://www.wgzblog.cn/archives/66656328.html"/>
+    <id>https://www.wgzblog.cn/archives/66656328.html</id>
+    <published>2020-05-06T19:57:26.000Z</published>
+    <updated>2020-05-06T12:00:02.882Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这周用了两天的时间读完了吴军老师的《见识》，里面有很多对于人生非常好的建议，拿出来与大家一同分享&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;一-幸福是目的，成功是手段&quot;&gt;&lt;a href=&quot;#一-幸福是目的，成功是手段&quot; class=&quot;headerlink&quot; title=&quot;一.幸福是目的，成功是手段&quot;&gt;&lt;/a&gt;一.幸福是目的，成功是手段&lt;/h1&gt;&lt;h2 id=&quot;1-人生是一条河&quot;&gt;&lt;a href=&quot;#1-人生是一条河&quot; class=&quot;headerlink&quot; title=&quot;1.人生是一条河&quot;&gt;&lt;/a&gt;1.人生是一条河&lt;/h2&gt;&lt;p&gt;人生就像是一条河，决定这条河能存放多少水不仅仅取决于河流的长度，还有河流的穿度和深度。人生的长度虽不固定，但每个人也都相差无几，那么想要人生活的更加精彩就需要拓宽我们的宽度，挖掘我们的深度。&lt;/p&gt;
+&lt;h2 id=&quot;2-给三本学生的建议&quot;&gt;&lt;a href=&quot;#2-给三本学生的建议&quot; class=&quot;headerlink&quot; title=&quot;2.给三本学生的建议&quot;&gt;&lt;/a&gt;2.给三本学生的建议&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="读书" scheme="https://www.wgzblog.cn/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="成长" scheme="https://www.wgzblog.cn/tags/%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo-NexT Tag 插件的使用</title>
