@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.wgzblog.cn/"/>
-  <updated>2020-05-06T12:00:42.663Z</updated>
+  <updated>2020-05-07T02:51:54.476Z</updated>
   <id>https://www.wgzblog.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一文读懂Redis</title>
+    <link href="https://www.wgzblog.cn/archives/9c6074cc.html"/>
+    <id>https://www.wgzblog.cn/archives/9c6074cc.html</id>
+    <published>2020-05-07T10:50:05.000Z</published>
+    <updated>2020-05-07T02:51:54.476Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;NoSQL概述&quot;&gt;&lt;a href=&quot;#NoSQL概述&quot; class=&quot;headerlink&quot; title=&quot;NoSQL概述&quot;&gt;&lt;/a&gt;NoSQL概述&lt;/h1&gt;&lt;h2 id=&quot;一-数据存储的演化史&quot;&gt;&lt;a href=&quot;#一-数据存储的演化史&quot; class=&quot;headerlink&quot; title=&quot;一.数据存储的演化史&quot;&gt;&lt;/a&gt;一.数据存储的演化史&lt;/h2&gt;&lt;h3 id=&quot;1-单机MySQL的美好年代&quot;&gt;&lt;a href=&quot;#1-单机MySQL的美好年代&quot; class=&quot;headerlink&quot; title=&quot;1.单机MySQL的美好年代&quot;&gt;&lt;/a&gt;1.单机MySQL的美好年代&lt;/h3&gt;&lt;p&gt;在90年代，一个网站的访问量一般都不大，用单个数据库完全可以轻松应付。在那个时候，更多的都是静态网页，动态交互类型的网站不多。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200430102019.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="https://www.wgzblog.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="Redis" scheme="https://www.wgzblog.cn/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>你的见识决定你的人生</title>
