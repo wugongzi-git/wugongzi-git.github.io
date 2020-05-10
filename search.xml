@@ -1,517 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo-NexT Tag 插件的使用</title>
-    <url>/archives/ae7f7109.html</url>
-    <content><![CDATA[<p>Tag Plugin 是一种使 Hexo 支持特殊样式内容的方法。例如，我们无法在标准 Markdown 中显示具有自定义尺寸的图像。然后我们可以使用标签插件来解决它。 Hexo 有很多可以帮助用户的标签。 Hexo 还具有主题接口，使主题能够创建自己的标签。</p>
-<h2 id="文本居中引用-Centered-Quote"><a href="#文本居中引用-Centered-Quote" class="headerlink" title="文本居中引用 - Centered Quote"></a>文本居中引用 - Centered Quote</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% cq %}世间所有的相遇，都是久别重逢{% endcq %}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果：</p>
-<blockquote class="blockquote-center">
-            <p>世间所有的相遇，都是久别重逢</p>
-
-          </blockquote>
-
-<h2 id="提示块-Note"><a href="#提示块-Note" class="headerlink" title="提示块 - Note"></a>提示块 - Note</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% note default %}</span><br><span class="line">default 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note primary %}</span><br><span class="line">primary 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note success %}</span><br><span class="line">success 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note info %}</span><br><span class="line">info 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note warning %}</span><br><span class="line">warning 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note danger %}</span><br><span class="line">danger 提示块标签</span><br><span class="line">{% endnote %}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>主题配置文件中可以修改风格：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># Note tag (bs-callout).</span><br><span class="line">note:</span><br><span class="line">  # Note tag style values:</span><br><span class="line">  #  - simple    bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span><br><span class="line">  #  - disabled  disable all CSS styles import of note tag.</span><br><span class="line">  # 风格</span><br><span class="line">  style: flat</span><br><span class="line">  # 要不要图标</span><br><span class="line">  icons: true</span><br><span class="line">  # 圆角矩形</span><br><span class="line">  border_radius: 3</span><br><span class="line">  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied to label tag variables. This option can work with disabled note tag.</span><br><span class="line">  light_bg_offset: 0</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果：</p>
-<div class="note default">
-            <p>default 提示块标签</p>
-          </div>
-
-<div class="note primary">
-            <p>primary 提示块标签</p>
-          </div>
-
-<div class="note success">
-            <p>success 提示块标签</p>
-          </div>
-
-<div class="note info">
-            <p>info 提示块标签</p>
-          </div>
-
-<div class="note warning">
-            <p>warning 提示块标签</p>
-          </div>
-
-<div class="note danger">
-            <p>danger 提示块标签</p>
-          </div>
-
-<h2 id="标签-Label"><a href="#标签-Label" class="headerlink" title="标签 - Label"></a>标签 - Label</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% label default@默认 %} {% label primary@主要 %} {% label success@成功 %} {% label info@信息 %} {% label warning@警告 %} {% label danger@危险 %} </span><br><span class="line">{% label success@这是成功的信息%}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果：</p>
-<span class="label default">默认</span> <span class="label primary">主要</span> <span class="label success">成功</span> <span class="label info">信息</span> <span class="label warning">警告</span> <span class="label danger">危险</span> 
-<span class="label success">这是成功的信息</span>
-
-<h2 id="选项卡-Tabs"><a href="#选项卡-Tabs" class="headerlink" title="选项卡 - Tabs"></a>选项卡 - Tabs</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% tabs tab,1 %} 名字为tab，默认在第1个选项卡，如果是-1则隐藏</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 1** </span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 2**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab A --&gt;</span><br><span class="line">**选项卡 3** 名字为A</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">{% endtabs %}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>主题配置文件：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># Tabs tag</span><br><span class="line">tabs:</span><br><span class="line">  enable: true</span><br><span class="line">  transition:</span><br><span class="line">    tabs: true</span><br><span class="line">    labels: true</span><br><span class="line">  border_radius: 0</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果：</p>
-<div class="tabs" id="tab"><ul class="nav-tabs"><li class="tab active"><a href="#tab-1">tab 1</a></li><li class="tab"><a href="#tab-2">tab 2</a></li><li class="tab"><a href="#tab-3">A</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-1"><p><strong>选项卡 1</strong> </p></div><div class="tab-pane" id="tab-2"><p><strong>选项卡 2</strong></p></div><div class="tab-pane" id="tab-3"><p><strong>选项卡 3</strong> 名字为A</p></div></div></div>
-
-<p><strong>选项卡 3</strong> 名字为 A</p>
-<h2 id="按钮-Button"><a href="#按钮-Button" class="headerlink" title="按钮 - Button"></a>按钮 - Button</h2><p>使用方法：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% button url, text, icon [class], [title] %}</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li><code>url</code> : 绝对或相对 URL</li>
-<li><code>text</code> : 按钮文字，如果未指定图标则为必须</li>
-<li><code>icon</code> : FontAwesome 图标名称（开头没有’fa-‘）。如果未指定文本，则为必需</li>
-<li><code>[class]</code> : FontAwesome 类：<code>fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5X</code> ，可选参数。</li>
-<li><code>[title]</code> : 鼠标悬停时的工具提示，可选参数。</li>
-</ul>
-<p>注意：最好添加 `` 标签，测试时没加 div，下面显示不完全，加上非常美观。</p>
-<p>一个示例：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">&lt;div&gt;{% button https://wgzblog.cn/ ,首页,home fa-fw,这是五公子的博客首页%}&lt;/div&gt;</span><br></pre></td></tr></tbody></table></figure>
-
-<p>显示效果：</p>
-<div><a class="btn" href="https://wgzblog.cn/ " target="_blank" rel="noopener external nofollow noreferrer" title="这是五公子的个人博客首页">
-            <i class="fa fa-home fa-fw"></i>首页
-          </a></div>
-
-<p>多个按钮居中显示：</p>
-<div class="text-center"><div><a class="btn" href="https://wgzblog.cn/ " target="_blank" rel="noopener external nofollow noreferrer" title="这是五公子的个人博客首页">
-            <i class="fa fa-home fa-fw"></i>首页
-          </a> <a class="btn" href="https://wgzblog.cn/movies/ " target="_blank" rel="noopener external nofollow noreferrer" title="豆瓣电影">
-            <i class="fa fa-film fa-fw"></i>观影
-          </a> <a class="btn" href="https://wgzblog.cn/books/ " target="_blank" rel="noopener external nofollow noreferrer" title="豆瓣读书">
-            <i class="fa fa-book fa-fw"></i>阅读
-          </a></div></div><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/archives/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener external nofollow noreferrer">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener external nofollow noreferrer">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener external nofollow noreferrer">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener external nofollow noreferrer">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener external nofollow noreferrer">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener external nofollow noreferrer">Deployment</a></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-  </entry>
-  <entry>
-    <title>Hexo-NexT配置个人博客</title>
-    <url>/archives/ae7f7108.html</url>
-    <content><![CDATA[<h1 id="一、安装NexT"><a href="#一、安装NexT" class="headerlink" title="一、安装NexT"></a>一、安装NexT</h1><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
-<h2 id="1-克隆最新版本"><a href="#1-克隆最新版本" class="headerlink" title="1.克隆最新版本"></a>1.克隆最新版本</h2><p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>Git</code> checkout 代码：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">cd</span> <span class="string">your-hexo-site</span></span><br><span class="line"><span class="string">$</span> <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/iissnan/hexo-theme-next</span> <span class="string">themes/next</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="2-直接下载"><a href="#2-直接下载" class="headerlink" title="2.直接下载"></a>2.直接下载</h2><ol>
-<li>前往 NexT 版本 <a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener external nofollow noreferrer">发布页面</a>。</li>
-<li>选择你所需要的版本，下载 Download 区域下的 Source Code (zip) 到本地。例如，下载 v0.4.0 版本：</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411200230.png" alt=""></p>
-<ol start="3">
-<li>解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（<code>hexo-theme-next-0.4.0</code>）更改为 <code>next</code>。</li>
-</ol>
-<h1 id="二、启用主题"><a href="#二、启用主题" class="headerlink" title="二、启用主题"></a>二、启用主题</h1><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件，Hexo目录下的_config.yml</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<p>到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 我们最好使用 <code>hexo clean</code> 来清除 Hexo 的缓存。</p>
-<h1 id="三、验证主题"><a href="#三、验证主题" class="headerlink" title="三、验证主题"></a>三、验证主题</h1><p>到此，我们已经设置好了next主题，现在我们需要来验证一下我们的配置是否成功</p>
-<p>首先启动 Hexo 本地站点，并开启调试模式（即加上 <code>--debug</code>），整个命令是 <code>hexo s --debug</code>。 在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。 当命令行输出中提示出：</p>
-<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">INFO  Hexo is running at http:<span class="comment">//0.0.0.0:4000/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>此时即可使用浏览器访问 <code>http://localhost:4000</code>，检查站点是否正确运行。</p>
-<blockquote>
-<p>当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411201330.png" alt=""></p>
-<h1 id="四、主题设置"><a href="#四、主题设置" class="headerlink" title="四、主题设置"></a>四、主题设置</h1><h2 id="1-选择Scheme"><a href="#1-选择Scheme" class="headerlink" title="1.选择Scheme"></a>1.选择Scheme</h2><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：</p>
-<ul>
-<li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
-<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
-<li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
-</ul>
-<p>Scheme 的切换通过更改 <strong>主题配置文件</strong>，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 <code>#</code> 去除即可。</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Muse</span>   <span class="comment">#</span></span><br><span class="line"><span class="comment"># scheme: Mist     #菜单横着排列 菜单在上面</span></span><br><span class="line"><span class="comment"># scheme: Pisces     #菜单在左边</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="2-设置语言"><a href="#2-设置语言" class="headerlink" title="2.设置语言"></a>2.设置语言</h2><p>编辑 <strong>站点配置文件</strong>， 将 <code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-Cn</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>目前 NexT 支持的语言如以下表格所示：</p>
-<table>
-<thead>
-<tr>
-<th align="left">语言</th>
-<th align="left">代码</th>
-<th align="left">设定示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">English</td>
-<td align="left"><code>en</code></td>
-<td align="left"><code>language: en</code></td>
-</tr>
-<tr>
-<td align="left">简体中文</td>
-<td align="left"><code>zh-Cn</code></td>
-<td align="left"><code>language: zh-Cn</code></td>
-</tr>
-<tr>
-<td align="left">Français</td>
-<td align="left"><code>fr-FR</code></td>
-<td align="left"><code>language: fr-FR</code></td>
-</tr>
-<tr>
-<td align="left">Português</td>
-<td align="left"><code>pt</code></td>
-<td align="left"><code>language: pt</code> or <code>language: pt-BR</code></td>
-</tr>
-<tr>
-<td align="left">繁體中文</td>
-<td align="left"><code>zh-hk</code> 或者 <code>zh-tw</code></td>
-<td align="left"><code>language: zh-hk</code></td>
-</tr>
-<tr>
-<td align="left">Русский язык</td>
-<td align="left"><code>ru</code></td>
-<td align="left"><code>language: ru</code></td>
-</tr>
-<tr>
-<td align="left">Deutsch</td>
-<td align="left"><code>de</code></td>
-<td align="left"><code>language: de</code></td>
-</tr>
-<tr>
-<td align="left">日本語</td>
-<td align="left"><code>ja</code></td>
-<td align="left"><code>language: ja</code></td>
-</tr>
-<tr>
-<td align="left">Indonesian</td>
-<td align="left"><code>id</code></td>
-<td align="left"><code>language: id</code></td>
-</tr>
-<tr>
-<td align="left">Korean</td>
-<td align="left"><code>ko</code></td>
-<td align="left"><code>language: ko</code></td>
-</tr>
-</tbody></table>
-<h2 id="3-设置菜单"><a href="#3-设置菜单" class="headerlink" title="3.设置菜单"></a>3.设置菜单</h2><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="noopener external nofollow noreferrer">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
-<p>编辑 <strong>主题配置文件</strong>，修改以下内容：</p>
-<p>①、设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code>是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉</p>
-<p>NexT 默认的菜单项有（标注 的项表示需要手动创建这个页面）：</p>
-<table>
-<thead>
-<tr>
-<th align="left">键值</th>
-<th align="left">设定值</th>
-<th align="left">显示文本（简体中文）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">home</td>
-<td align="left"><code>home: /</code></td>
-<td align="left">主页</td>
-</tr>
-<tr>
-<td align="left">archives</td>
-<td align="left"><code>archives: /archives</code></td>
-<td align="left">归档页</td>
-</tr>
-<tr>
-<td align="left">categories</td>
-<td align="left"><code>categories: /categories</code></td>
-<td align="left">分类页</td>
-</tr>
-<tr>
-<td align="left">tags</td>
-<td align="left"><code>tags: /tags</code></td>
-<td align="left">标签页</td>
-</tr>
-<tr>
-<td align="left">about</td>
-<td align="left"><code>about: /about</code></td>
-<td align="left">关于页面</td>
-</tr>
-<tr>
-<td align="left">commonweal</td>
-<td align="left"><code>commonweal: /404.html</code></td>
-<td align="left">公益 404</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>注意：设置菜单时记得在Hexo的source目录下创建相对应的目录，否则会出现</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411210224.png" alt=""></p>
-<p>比如要创建标签文件夹，终端中输入（前提在<strong>Hexo</strong>文件路径下）：</p>
-<figure class="highlight jsx"><table><tbody><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"tags"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>创建完目录后的页面再次打开是这样的</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205415.png" alt=""></p>
-<p>编辑<code>Blog/source/categories</code>中<strong>index.md</strong>文件，添加<code>type: "categories"</code>，其他Menu也同理创建。</p>
-<p>添加type后的页面是这样的</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205544.png" alt=""></p>
-</blockquote>
-<p>②、设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。</p>
-<p>以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Cn.yml</code>，在 <code>menu</code> 字段下添加一项：</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">首页</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">归档</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">分类</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">标签</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">关于</span></span><br><span class="line">  <span class="attr">search:</span> <span class="string">搜索</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">公益404</span></span><br><span class="line">  <span class="attr">something:</span> <span class="string">有料</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>③、设定菜单项的图标，对应的字段是 menu。 <code>||</code>后面的这是图标名称，<code>icon name</code> 是 <a href="http://fontawesome.io/" target="_blank" rel="noopener external nofollow noreferrer">Font Awesome</a> 图标的 名字。而 menu_settings中<code>icons</code> 可用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
-
-<blockquote>
-<p> 在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字） 的情况下，NexT 将会使用 作为图标。</p>
-<p> 请注意键值（如 <code>home</code>）的大小写要严格匹配</p>
-</blockquote>
-<h2 id="4-设置侧栏"><a href="#4-设置侧栏" class="headerlink" title="4.设置侧栏"></a>4.设置侧栏</h2><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 <strong>主题配置文件</strong> 中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
-<p>①、设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
-<ul>
-<li>left - 靠左放置</li>
-<li>right - 靠右放置</li>
-</ul>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">left</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>②、设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
-<ul>
-<li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
-<li><code>always</code> - 在所有页面中都显示</li>
-<li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
-<li><code>remove</code> - 完全移除</li>
-</ul>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">display:</span> <span class="string">post</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="5-设置头像"><a href="#5-设置头像" class="headerlink" title="5.设置头像"></a>5.设置头像</h2><p>编辑 <strong>主题配置文件</strong>， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
-<table>
-<thead>
-<tr>
-<th align="left">地址</th>
-<th align="left">值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">完整的互联网 URI</td>
-<td align="left"><code>http://example.com/avatar.png</code></td>
-</tr>
-<tr>
-<td align="left">站点内的地址</td>
-<td align="left">将头像放置主题目录下的 <code>source/uploads/</code> （新建 uploads 目录若不存在） 配置为：<code>avatar: /uploads/avatar.png</code>或者 放置在 <code>source/images/</code> 目录下 配置为：<code>avatar: /images/avatar.png</code></td>
-</tr>
-</tbody></table>
-<p>头像设置示例</p>
-<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">avatar:</span> <span class="string">http://example.com/avatar.png</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="6-设置作者昵称"><a href="#6-设置作者昵称" class="headerlink" title="6.设置作者昵称"></a>6.设置作者昵称</h2><p>编辑 <strong>站点配置文件</strong>， 设置 <code>author</code> 为你的昵称。</p>
-<h2 id="7-站点描述"><a href="#7-站点描述" class="headerlink" title="7.站点描述"></a>7.站点描述</h2><p>编辑 <strong>站点配置文件</strong>， 设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你的见识决定你的人生</title>
-    <url>/archives/66656328.html</url>
-    <content><![CDATA[<blockquote>
-<p>这周用了两天的时间读完了吴军老师的《见识》，里面有很多对于人生非常好的建议，拿出来与大家一同分享</p>
-</blockquote>
-<h1 id="一-幸福是目的，成功是手段"><a href="#一-幸福是目的，成功是手段" class="headerlink" title="一.幸福是目的，成功是手段"></a>一.幸福是目的，成功是手段</h1><h2 id="1-人生是一条河"><a href="#1-人生是一条河" class="headerlink" title="1.人生是一条河"></a>1.人生是一条河</h2><p>人生就像是一条河，决定这条河能存放多少水不仅仅取决于河流的长度，还有河流的穿度和深度。人生的长度虽不固定，但每个人也都相差无几，那么想要人生活的更加精彩就需要拓宽我们的宽度，挖掘我们的深度。</p>
-<h2 id="2-给三本学生的建议"><a href="#2-给三本学生的建议" class="headerlink" title="2.给三本学生的建议"></a>2.给三本学生的建议</h2><p>我去过中国的很多大学，985、211，从一本到三本。不管他们因为什么原因上的三本，但是你会发现三本学生的努力程度远远不如一本（这里并没有歧视三本的学生，只是阐述这样一个现象），很常见的一个现象，你晚上去三本学校的校门口看一下，外面的小吃街生意红火，灯红酒绿的；但是我去清华、北大和交大时，晚上外面真的看不到什么人，大家都在图书馆里面学习。环境真的很重要，古人常说近朱者赤近墨者黑，你想想看如果你们寝室室友每天晚上都在看书学习你还好意思玩游戏吗？相反如果大家都在玩游戏、看电影，你想学习也很难静下心来。</p>
-<h2 id="3-人生最重要的投资"><a href="#3-人生最重要的投资" class="headerlink" title="3.人生最重要的投资"></a>3.人生最重要的投资</h2><p>最重要的投资是什么？工作？学业？都不是，是婚姻，是那个陪着你度过一辈子生活的人，难道这不是最重要的吗？</p>
-<p>吴军老师给男生的建议：</p>
-<blockquote>
-<ul>
-<li>聪明人会欣赏聪明人，而且也只有聪明人才会欣赏聪明人。道理也很简单，如果两个人的认知不在一个阶层，根本无法交流</li>
-<li>找心智成熟、价值观一致的伴侣。那些永远离不开妈妈或者家庭的女生，将来在自己的婚姻中多半会有问题</li>
-<li>男士应该有足够的独立性。男生要主动承担起对自己未来家庭的义务，在一个完美的婚姻中，夫妻双方对应该明白“夫妻优于子女，更优于双方的父母”，只有小家好了，大家才会好。</li>
-<li>夫妻双方可塑性很重要。女生身上有些小缺点，男生可以包容，但是包容一天一个月一年都还好，但是包容一辈子还是很难的，所以夫妻双方在相处的过程慢慢磨合，为彼此互相改变，一起变得优秀。</li>
-</ul>
-</blockquote>
-<p>吴军老师给女生的建议：</p>
-<blockquote>
-<ul>
-<li>认清恋爱和婚姻。恋爱与婚姻不同，恋爱是激情，激情终将会退却；婚姻则是由两个人一同构造一个舒适的共同体</li>
-<li>男生没有老实与不老实，只有对你好和对你不好的男生。老实本分的男生好，在大多数女生心中可能都有这样的一种看法，尤其是父母这一代人，但其实事实并非如此。人类之所以不断繁衍，其实基因中都有好色的成分，不仅男人如此，女人也一起。如果一个男生对你不好，即使再老实，也终有一天会忍不住女人的诱惑而出轨。</li>
-<li>对你好的男生，不能看对方怎么说，而要看他怎么做；（很多男生追女生的时候都有过这种表现，就是从今天起我会每天和你说晚安，这种情况就是光说不做，不能信。当然如果他既说了又做了那就另说了）不仅要看他在热恋中如何对自己，也要看他如何对待别人（尤其是他的父母），以及能否在长时间对你好。恋爱中的男生，总是喜欢甜言蜜语，这或许是真心，但是待激素分泌减少后，男人常常就不认账了。</li>
-</ul>
-</blockquote>
-<h1 id="二-人生需要做减法"><a href="#二-人生需要做减法" class="headerlink" title="二.人生需要做减法"></a>二.人生需要做减法</h1><h2 id="1-不做选择的幸福"><a href="#1-不做选择的幸福" class="headerlink" title="1.不做选择的幸福"></a>1.不做选择的幸福</h2><p>不知道大家有没有为今天早上穿什么衣服，今天中午吃什么饭类似这样的问题而烦恼过，我反正是有过。为什么会出现这样的原因呢？答案是选择太多了，当你的衣柜里面只有一件衣服的时候你还会烦恼吗？当然不会了。我们一边希望有更多选择，但是一边有因为选择太多而烦恼，既然如此，那干脆就减少一些选择吧。给生活做一次断舍离，把不需要的东西扔掉，把心思放在自己的成长上面。</p>
-<h2 id="2-西瓜与芝麻"><a href="#2-西瓜与芝麻" class="headerlink" title="2.西瓜与芝麻"></a>2.西瓜与芝麻</h2><p>下面的这些坑不知道你有没有踩过：</p>
-<blockquote>
-<ul>
-<li>为了免费的东西的挤破头了排队</li>
-<li>为了省钱，在路上多走了10分钟</li>
-<li>为了几元钱的红包，每隔三五分钟看一下手机</li>
-<li>为了“双十一”抢货不睡觉</li>
-</ul>
-</blockquote>
-<p>这些眼前的这些蝇头小利就是芝麻，你捡了1000粒芝麻，也不如收获一个西瓜。目光放得长远些，这些话也送给那些为了赚些外快买衣服买零食而去做兼职的大学生</p>
-<h2 id="3-生也有涯，知也无涯"><a href="#3-生也有涯，知也无涯" class="headerlink" title="3.生也有涯，知也无涯"></a>3.生也有涯，知也无涯</h2><p>庄子在《养生主》一章中开篇讲了这样一句话：“’吾生也有涯，而知也无涯，以有涯随无涯，殆已。以而为知者，殆而已矣’。它的大意是：生命是有限的，知识是无限的，以有限的生命追求无限的知识是要失败的，已经知道这个事实还要为之，失败是确定无疑的了。</p>
-<p>聚会迟到的人总是会有各种各样的理由，而且都挺合理。其实仔细一了解，大多是因为中途临时有事处理了一下。你问他这些事情是不是现在不处理不行，他们说倒也不是，就是事情来了顺手就给处理了。在工作上我们经常会遇到很多类似这样紧急但不重要的事情，无关紧要的事情推迟一会倒也无妨。</p>
-<p>我自己一向都是一个很守时的人，这里分享一下我的方法。不管聚会、开会或者坐车等等，只要是约定好时间的事情，我都会提前到（具体提前多长时间视情况而定），给自己预留充足的时间，这样即使路上遇到堵车或者其他的一些琐事我也有时间去处理。</p>
-<h1 id="三-谈谈见识"><a href="#三-谈谈见识" class="headerlink" title="三.谈谈见识"></a>三.谈谈见识</h1><h2 id="1-起跑线和玻璃心"><a href="#1-起跑线和玻璃心" class="headerlink" title="1.起跑线和玻璃心"></a>1.起跑线和玻璃心</h2><p>不能让孩子输在起跑线上，这是现在中国家长的一种共识。看一下现在辅导班生意有多好就知道了。一个50人的班级，永远都有第一名和第五十名，在起跑线上赢了，这辈子就能赢吗？还真不是这样，了解美国总统杜鲁门事迹的人应该能明白我说的意思。</p>
-<p>由于过于强调起跑线的重要性，很多家长和老师不断的告知孩子一朝落后，永远落后，孩子们一旦遇到一点不顺利，暂时落后了，就害怕的要死。用不了多长时间，孩子的心就变得很脆弱，成了玻璃心。以后的生活中，一旦遇到了一些挫折，便成了一件了不得的事情。聪明人不妨练就一颗永远摔不坏的心。有一颗强大的心脏，自己总是能不断坚持跑下去，即使跌倒也能爬起来。</p>
-<h2 id="2-比贫穷更可怕的是什么"><a href="#2-比贫穷更可怕的是什么" class="headerlink" title="2.比贫穷更可怕的是什么"></a>2.比贫穷更可怕的是什么</h2><p><strong>缺乏见识：</strong></p>
-<p>缺乏见识，视野就被局限了。你可能有这样的体会，和某些人讲道理永远讲不通，这并非那些人故意为之，而是他们实在没有见识，大家的认知水平根本不在一个平面上。</p>
-<p><strong>缺乏爱：</strong></p>
-<p>合作共赢，一个不懂得爱别人的人不值得别人爱他</p>
-<p><strong>缺乏规矩</strong></p>
-<p>原则和底线是不能触犯的东西，原则上不可以的事情就是不可以，没有例外，做人该有基本的底线。</p>
-<h1 id="四-大家智慧"><a href="#四-大家智慧" class="headerlink" title="四.大家智慧"></a>四.大家智慧</h1><h2 id="1-莎士比亚的智慧：论朋友"><a href="#1-莎士比亚的智慧：论朋友" class="headerlink" title="1.莎士比亚的智慧：论朋友"></a>1.莎士比亚的智慧：论朋友</h2><p>吴军老师的交友法则：</p>
-<blockquote>
-<ul>
-<li>反思三思而行，不要想到什么就说什么</li>
-<li>对人要和气，但不要过分狎昵</li>
-<li>相知有素的朋友，应该用钢圈拴在你的灵魂上，可是不要对每一个泛泛的新知滥施你的交情</li>
-</ul>
-</blockquote>
-<h2 id="2-巴菲特午餐：人生的智慧"><a href="#2-巴菲特午餐：人生的智慧" class="headerlink" title="2.巴菲特午餐：人生的智慧"></a>2.巴菲特午餐：人生的智慧</h2><blockquote>
-<ul>
-<li>不做自己不懂的事情</li>
-<li>不要做空股票</li>
-<li>永远不要用杠杆投资</li>
-</ul>
-</blockquote>
-<h1 id="五-拒绝伪工作者"><a href="#五-拒绝伪工作者" class="headerlink" title="五.拒绝伪工作者"></a>五.拒绝伪工作者</h1><h2 id="1-一万小时理论"><a href="#1-一万小时理论" class="headerlink" title="1.一万小时理论"></a>1.一万小时理论</h2><p>在一个领域内练习一万小时就可能成为这个行业的大牛，这是真的吗？为什么我在我的行业里花费了很多时间依然没有进步，吴军老师指出了四个误区</p>
-<p><strong>误区一：简单重复</strong></p>
-<p>一直在重复低层次的事情，举个例子，中学时代做题，你一直在做些简单的题，那些自己觉得难的题就不去挑战，那么这样你做再多的题都不会有太大进步。</p>
-<p><strong>误区二：习惯性失败</strong></p>
-<p>这一类人和前面的相反，他们好高骛远，不注重学习，懒得总结教训，同时脸皮还很薄，也不好意思请教</p>
-<p><strong>误区三：林黛玉式的困境</strong></p>
-<p>林黛玉很有内涵，也有才华，想问题很深入，但这也是她致命的弱点。我们知道，一个概念内涵越宽，外延就会越窄，你如果只在自己的一亩三分地上耕耘，那么对外界的所知就越少。</p>
-<p><strong>误区四：狗熊掰棒子</strong></p>
-<p>一万小时的努力需要一个积累的效应，第二次的努力要最大限度的复用第一次努力的成果，用在开发软件上面就是不要写重复的代码</p>
-<h2 id="2-三板斧破困境"><a href="#2-三板斧破困境" class="headerlink" title="2.三板斧破困境"></a>2.三板斧破困境</h2><p><strong>一、确立“愿景—目标—道路”</strong></p>
-<p>首先你的确立一个方向（愿景），比如成为一个前端工程师</p>
-<p>其次，你得制定阶段性目标，比如第一个月学习html，css，做一个静态网页出来；第二月学习js语法等等</p>
-<p>最后，有了目标，那么如何实现它，实现目标就要有通往成功的道路，这条道路可以拆解为一系列可操作的步骤，比如第一天学习div、p标签等。落实到行动中去。</p>
-<p><strong>二、即使听到不中听的话，也要试着找出其中的合理之处</strong></p>
-<p>这句话有三层含义：</p>
-<p>第一层，相当于我们今天说的换位思考</p>
-<p>第二层，凡事要习惯回过头来三思，多想几遍</p>
-<p>第三层，即使对方真的是胡说八道，也要思考他为什么这么说</p>
-<p><strong>三、凡事做记录，这样可以避免狗熊掰棒子</strong></p>
-<p>几个月看的书，学的知识，如果不做记录，很快就忘了，等到要用的时候不知从何翻起，记录就是方便你下次使用。</p>
-<h2 id="3-谷歌的目标管理法"><a href="#3-谷歌的目标管理法" class="headerlink" title="3.谷歌的目标管理法"></a>3.谷歌的目标管理法</h2><p> 谷歌是如何管理员工的——OKR</p>
-<p>谷歌公司虽然看上去管理松散，但是做事情的效率颇高，这说明他外松内紧的管理其实挺有效的。</p>
-<p>OKR是Object and Key Results的首字母缩写，即目标和衡量目标是否达成的关键结果。谷歌的每个员工每个季度之初都需要给自己定一个或几个目标，每个人的OKR大约半页纸场，写好后放到自己在公司里的网页上，这样大家都可以看到，如果谁没有制定OKR也一目了然，即使没有人催促他，大家看到他的网页上一片空白，他自己都不好意思，这其实在管理上已经起到了基本的监督作用</p>
-<p>不同于KPI，OKR不在乎过程，更关注结果，一件事情不管你用什么方式去完成他，只要最后完成就行，现在很多公司实行弹性工作制就是这样</p>
-<h2 id="4-做好最后的1"><a href="#4-做好最后的1" class="headerlink" title="4.做好最后的1%"></a>4.做好最后的1%</h2><p>几个人去山里挖矿，大多数人挖了一个星期看没有矿就走了，只有一个人坚持了下来，最后挖到了。这里不是在给大家说心灵鸡汤，而是确实是这样。不知道你有没有这样的同事，你问他工作完成了没有，他通常会说基本上完成了，这代表什么，就是没完成嘛。哪怕差0.1都不行，一定要做完、做好，任何事情都是如此。</p>
-<h1 id="六-职场那些事"><a href="#六-职场那些事" class="headerlink" title="六.职场那些事"></a>六.职场那些事</h1><h2 id="1-年轻人第一份工作不要太在乎工资"><a href="#1-年轻人第一份工作不要太在乎工资" class="headerlink" title="1.年轻人第一份工作不要太在乎工资"></a>1.年轻人第一份工作不要太在乎工资</h2><p>几乎没有人是靠第一份工作的工资发财，如果大家能够认清这个现实，就能体会到第一份工作是否多20%的工资是一件毫无意义的事情。</p>
-<p>人的第一份工作很重要，它必须能够帮助你在10年后挣到同龄人或者同班同学3-5倍的收入，必须能够让你快速成长，养成良好的职业习惯，在最短的时间里了解全行业。</p>
-<h2 id="2-职场上的误区"><a href="#2-职场上的误区" class="headerlink" title="2.职场上的误区"></a>2.职场上的误区</h2><p><strong>误区一：工作和职业分不清</strong></p>
-<p>工作时大家谋生的手段，职业是我们一辈子要从事的事业，要选择那些对职业有利的工作</p>
-<p><strong>误区二：把自己仅仅当作一个过客，而不是主人</strong></p>
-<p>很多人都觉得现在自己的工作只是一个跳板，以后要去更好的公司，所以工作就不是那么上心，一旦有了这样的心态，你的成长就很有限</p>
-<p><strong>误区三：被语言暴力激怒后就乱了章法</strong></p>
-<p>工作上被领导或者老板说了几句，心里就很难受，然后就辞职了或者不好好工作了，这都是不成熟的表现。当别人对你实施语言暴力时首先思考一下他说的有没有道理，如果有就改正，没有的话也可以私下和对方沟通，让对方知道你受到伤害了，不然别人以为你没事，下次依然会说你</p>
-<p><strong>误区三：疏于沟通</strong></p>
-<p>只顾埋头做自己的事情，而忘记了与别人的沟通，很多时候一个问题如果大家在一起商量，集思广益，很快就解决，而你选择自己一个人苦思冥想，吃力不讨好</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>]]></content>
-      <categories>
-        <category>读书</category>
-      </categories>
-      <tags>
-        <tag>成长</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一文读懂Redis</title>
     <url>/archives/9c6074cc.html</url>
     <content><![CDATA[<h1 id="NoSQL概述"><a href="#NoSQL概述" class="headerlink" title="NoSQL概述"></a>NoSQL概述</h1><h2 id="一-数据存储的演化史"><a href="#一-数据存储的演化史" class="headerlink" title="一.数据存储的演化史"></a>一.数据存储的演化史</h2><h3 id="1-单机MySQL的美好年代"><a href="#1-单机MySQL的美好年代" class="headerlink" title="1.单机MySQL的美好年代"></a>1.单机MySQL的美好年代</h3><p>在90年代，一个网站的访问量一般都不大，用单个数据库完全可以轻松应付。在那个时候，更多的都是静态网页，动态交互类型的网站不多。</p>
@@ -782,5 +271,516 @@ hash-max-zipmap-value 512</code></pre></li>
       <tags>
         <tag>Redis</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>你的见识决定你的人生</title>
+    <url>/archives/66656328.html</url>
+    <content><![CDATA[<blockquote>
+<p>这周用了两天的时间读完了吴军老师的《见识》，里面有很多对于人生非常好的建议，拿出来与大家一同分享</p>
+</blockquote>
+<h1 id="一-幸福是目的，成功是手段"><a href="#一-幸福是目的，成功是手段" class="headerlink" title="一.幸福是目的，成功是手段"></a>一.幸福是目的，成功是手段</h1><h2 id="1-人生是一条河"><a href="#1-人生是一条河" class="headerlink" title="1.人生是一条河"></a>1.人生是一条河</h2><p>人生就像是一条河，决定这条河能存放多少水不仅仅取决于河流的长度，还有河流的穿度和深度。人生的长度虽不固定，但每个人也都相差无几，那么想要人生活的更加精彩就需要拓宽我们的宽度，挖掘我们的深度。</p>
+<h2 id="2-给三本学生的建议"><a href="#2-给三本学生的建议" class="headerlink" title="2.给三本学生的建议"></a>2.给三本学生的建议</h2><p>我去过中国的很多大学，985、211，从一本到三本。不管他们因为什么原因上的三本，但是你会发现三本学生的努力程度远远不如一本（这里并没有歧视三本的学生，只是阐述这样一个现象），很常见的一个现象，你晚上去三本学校的校门口看一下，外面的小吃街生意红火，灯红酒绿的；但是我去清华、北大和交大时，晚上外面真的看不到什么人，大家都在图书馆里面学习。环境真的很重要，古人常说近朱者赤近墨者黑，你想想看如果你们寝室室友每天晚上都在看书学习你还好意思玩游戏吗？相反如果大家都在玩游戏、看电影，你想学习也很难静下心来。</p>
+<h2 id="3-人生最重要的投资"><a href="#3-人生最重要的投资" class="headerlink" title="3.人生最重要的投资"></a>3.人生最重要的投资</h2><p>最重要的投资是什么？工作？学业？都不是，是婚姻，是那个陪着你度过一辈子生活的人，难道这不是最重要的吗？</p>
+<p>吴军老师给男生的建议：</p>
+<blockquote>
+<ul>
+<li>聪明人会欣赏聪明人，而且也只有聪明人才会欣赏聪明人。道理也很简单，如果两个人的认知不在一个阶层，根本无法交流</li>
+<li>找心智成熟、价值观一致的伴侣。那些永远离不开妈妈或者家庭的女生，将来在自己的婚姻中多半会有问题</li>
+<li>男士应该有足够的独立性。男生要主动承担起对自己未来家庭的义务，在一个完美的婚姻中，夫妻双方对应该明白“夫妻优于子女，更优于双方的父母”，只有小家好了，大家才会好。</li>
+<li>夫妻双方可塑性很重要。女生身上有些小缺点，男生可以包容，但是包容一天一个月一年都还好，但是包容一辈子还是很难的，所以夫妻双方在相处的过程慢慢磨合，为彼此互相改变，一起变得优秀。</li>
+</ul>
+</blockquote>
+<p>吴军老师给女生的建议：</p>
+<blockquote>
+<ul>
+<li>认清恋爱和婚姻。恋爱与婚姻不同，恋爱是激情，激情终将会退却；婚姻则是由两个人一同构造一个舒适的共同体</li>
+<li>男生没有老实与不老实，只有对你好和对你不好的男生。老实本分的男生好，在大多数女生心中可能都有这样的一种看法，尤其是父母这一代人，但其实事实并非如此。人类之所以不断繁衍，其实基因中都有好色的成分，不仅男人如此，女人也一起。如果一个男生对你不好，即使再老实，也终有一天会忍不住女人的诱惑而出轨。</li>
+<li>对你好的男生，不能看对方怎么说，而要看他怎么做；（很多男生追女生的时候都有过这种表现，就是从今天起我会每天和你说晚安，这种情况就是光说不做，不能信。当然如果他既说了又做了那就另说了）不仅要看他在热恋中如何对自己，也要看他如何对待别人（尤其是他的父母），以及能否在长时间对你好。恋爱中的男生，总是喜欢甜言蜜语，这或许是真心，但是待激素分泌减少后，男人常常就不认账了。</li>
+</ul>
+</blockquote>
+<h1 id="二-人生需要做减法"><a href="#二-人生需要做减法" class="headerlink" title="二.人生需要做减法"></a>二.人生需要做减法</h1><h2 id="1-不做选择的幸福"><a href="#1-不做选择的幸福" class="headerlink" title="1.不做选择的幸福"></a>1.不做选择的幸福</h2><p>不知道大家有没有为今天早上穿什么衣服，今天中午吃什么饭类似这样的问题而烦恼过，我反正是有过。为什么会出现这样的原因呢？答案是选择太多了，当你的衣柜里面只有一件衣服的时候你还会烦恼吗？当然不会了。我们一边希望有更多选择，但是一边有因为选择太多而烦恼，既然如此，那干脆就减少一些选择吧。给生活做一次断舍离，把不需要的东西扔掉，把心思放在自己的成长上面。</p>
+<h2 id="2-西瓜与芝麻"><a href="#2-西瓜与芝麻" class="headerlink" title="2.西瓜与芝麻"></a>2.西瓜与芝麻</h2><p>下面的这些坑不知道你有没有踩过：</p>
+<blockquote>
+<ul>
+<li>为了免费的东西的挤破头了排队</li>
+<li>为了省钱，在路上多走了10分钟</li>
+<li>为了几元钱的红包，每隔三五分钟看一下手机</li>
+<li>为了“双十一”抢货不睡觉</li>
+</ul>
+</blockquote>
+<p>这些眼前的这些蝇头小利就是芝麻，你捡了1000粒芝麻，也不如收获一个西瓜。目光放得长远些，这些话也送给那些为了赚些外快买衣服买零食而去做兼职的大学生</p>
+<h2 id="3-生也有涯，知也无涯"><a href="#3-生也有涯，知也无涯" class="headerlink" title="3.生也有涯，知也无涯"></a>3.生也有涯，知也无涯</h2><p>庄子在《养生主》一章中开篇讲了这样一句话：“’吾生也有涯，而知也无涯，以有涯随无涯，殆已。以而为知者，殆而已矣’。它的大意是：生命是有限的，知识是无限的，以有限的生命追求无限的知识是要失败的，已经知道这个事实还要为之，失败是确定无疑的了。</p>
+<p>聚会迟到的人总是会有各种各样的理由，而且都挺合理。其实仔细一了解，大多是因为中途临时有事处理了一下。你问他这些事情是不是现在不处理不行，他们说倒也不是，就是事情来了顺手就给处理了。在工作上我们经常会遇到很多类似这样紧急但不重要的事情，无关紧要的事情推迟一会倒也无妨。</p>
+<p>我自己一向都是一个很守时的人，这里分享一下我的方法。不管聚会、开会或者坐车等等，只要是约定好时间的事情，我都会提前到（具体提前多长时间视情况而定），给自己预留充足的时间，这样即使路上遇到堵车或者其他的一些琐事我也有时间去处理。</p>
+<h1 id="三-谈谈见识"><a href="#三-谈谈见识" class="headerlink" title="三.谈谈见识"></a>三.谈谈见识</h1><h2 id="1-起跑线和玻璃心"><a href="#1-起跑线和玻璃心" class="headerlink" title="1.起跑线和玻璃心"></a>1.起跑线和玻璃心</h2><p>不能让孩子输在起跑线上，这是现在中国家长的一种共识。看一下现在辅导班生意有多好就知道了。一个50人的班级，永远都有第一名和第五十名，在起跑线上赢了，这辈子就能赢吗？还真不是这样，了解美国总统杜鲁门事迹的人应该能明白我说的意思。</p>
+<p>由于过于强调起跑线的重要性，很多家长和老师不断的告知孩子一朝落后，永远落后，孩子们一旦遇到一点不顺利，暂时落后了，就害怕的要死。用不了多长时间，孩子的心就变得很脆弱，成了玻璃心。以后的生活中，一旦遇到了一些挫折，便成了一件了不得的事情。聪明人不妨练就一颗永远摔不坏的心。有一颗强大的心脏，自己总是能不断坚持跑下去，即使跌倒也能爬起来。</p>
+<h2 id="2-比贫穷更可怕的是什么"><a href="#2-比贫穷更可怕的是什么" class="headerlink" title="2.比贫穷更可怕的是什么"></a>2.比贫穷更可怕的是什么</h2><p><strong>缺乏见识：</strong></p>
+<p>缺乏见识，视野就被局限了。你可能有这样的体会，和某些人讲道理永远讲不通，这并非那些人故意为之，而是他们实在没有见识，大家的认知水平根本不在一个平面上。</p>
+<p><strong>缺乏爱：</strong></p>
+<p>合作共赢，一个不懂得爱别人的人不值得别人爱他</p>
+<p><strong>缺乏规矩</strong></p>
+<p>原则和底线是不能触犯的东西，原则上不可以的事情就是不可以，没有例外，做人该有基本的底线。</p>
+<h1 id="四-大家智慧"><a href="#四-大家智慧" class="headerlink" title="四.大家智慧"></a>四.大家智慧</h1><h2 id="1-莎士比亚的智慧：论朋友"><a href="#1-莎士比亚的智慧：论朋友" class="headerlink" title="1.莎士比亚的智慧：论朋友"></a>1.莎士比亚的智慧：论朋友</h2><p>吴军老师的交友法则：</p>
+<blockquote>
+<ul>
+<li>反思三思而行，不要想到什么就说什么</li>
+<li>对人要和气，但不要过分狎昵</li>
+<li>相知有素的朋友，应该用钢圈拴在你的灵魂上，可是不要对每一个泛泛的新知滥施你的交情</li>
+</ul>
+</blockquote>
+<h2 id="2-巴菲特午餐：人生的智慧"><a href="#2-巴菲特午餐：人生的智慧" class="headerlink" title="2.巴菲特午餐：人生的智慧"></a>2.巴菲特午餐：人生的智慧</h2><blockquote>
+<ul>
+<li>不做自己不懂的事情</li>
+<li>不要做空股票</li>
+<li>永远不要用杠杆投资</li>
+</ul>
+</blockquote>
+<h1 id="五-拒绝伪工作者"><a href="#五-拒绝伪工作者" class="headerlink" title="五.拒绝伪工作者"></a>五.拒绝伪工作者</h1><h2 id="1-一万小时理论"><a href="#1-一万小时理论" class="headerlink" title="1.一万小时理论"></a>1.一万小时理论</h2><p>在一个领域内练习一万小时就可能成为这个行业的大牛，这是真的吗？为什么我在我的行业里花费了很多时间依然没有进步，吴军老师指出了四个误区</p>
+<p><strong>误区一：简单重复</strong></p>
+<p>一直在重复低层次的事情，举个例子，中学时代做题，你一直在做些简单的题，那些自己觉得难的题就不去挑战，那么这样你做再多的题都不会有太大进步。</p>
+<p><strong>误区二：习惯性失败</strong></p>
+<p>这一类人和前面的相反，他们好高骛远，不注重学习，懒得总结教训，同时脸皮还很薄，也不好意思请教</p>
+<p><strong>误区三：林黛玉式的困境</strong></p>
+<p>林黛玉很有内涵，也有才华，想问题很深入，但这也是她致命的弱点。我们知道，一个概念内涵越宽，外延就会越窄，你如果只在自己的一亩三分地上耕耘，那么对外界的所知就越少。</p>
+<p><strong>误区四：狗熊掰棒子</strong></p>
+<p>一万小时的努力需要一个积累的效应，第二次的努力要最大限度的复用第一次努力的成果，用在开发软件上面就是不要写重复的代码</p>
+<h2 id="2-三板斧破困境"><a href="#2-三板斧破困境" class="headerlink" title="2.三板斧破困境"></a>2.三板斧破困境</h2><p><strong>一、确立“愿景—目标—道路”</strong></p>
+<p>首先你的确立一个方向（愿景），比如成为一个前端工程师</p>
+<p>其次，你得制定阶段性目标，比如第一个月学习html，css，做一个静态网页出来；第二月学习js语法等等</p>
+<p>最后，有了目标，那么如何实现它，实现目标就要有通往成功的道路，这条道路可以拆解为一系列可操作的步骤，比如第一天学习div、p标签等。落实到行动中去。</p>
+<p><strong>二、即使听到不中听的话，也要试着找出其中的合理之处</strong></p>
+<p>这句话有三层含义：</p>
+<p>第一层，相当于我们今天说的换位思考</p>
+<p>第二层，凡事要习惯回过头来三思，多想几遍</p>
+<p>第三层，即使对方真的是胡说八道，也要思考他为什么这么说</p>
+<p><strong>三、凡事做记录，这样可以避免狗熊掰棒子</strong></p>
+<p>几个月看的书，学的知识，如果不做记录，很快就忘了，等到要用的时候不知从何翻起，记录就是方便你下次使用。</p>
+<h2 id="3-谷歌的目标管理法"><a href="#3-谷歌的目标管理法" class="headerlink" title="3.谷歌的目标管理法"></a>3.谷歌的目标管理法</h2><p> 谷歌是如何管理员工的——OKR</p>
+<p>谷歌公司虽然看上去管理松散，但是做事情的效率颇高，这说明他外松内紧的管理其实挺有效的。</p>
+<p>OKR是Object and Key Results的首字母缩写，即目标和衡量目标是否达成的关键结果。谷歌的每个员工每个季度之初都需要给自己定一个或几个目标，每个人的OKR大约半页纸场，写好后放到自己在公司里的网页上，这样大家都可以看到，如果谁没有制定OKR也一目了然，即使没有人催促他，大家看到他的网页上一片空白，他自己都不好意思，这其实在管理上已经起到了基本的监督作用</p>
+<p>不同于KPI，OKR不在乎过程，更关注结果，一件事情不管你用什么方式去完成他，只要最后完成就行，现在很多公司实行弹性工作制就是这样</p>
+<h2 id="4-做好最后的1"><a href="#4-做好最后的1" class="headerlink" title="4.做好最后的1%"></a>4.做好最后的1%</h2><p>几个人去山里挖矿，大多数人挖了一个星期看没有矿就走了，只有一个人坚持了下来，最后挖到了。这里不是在给大家说心灵鸡汤，而是确实是这样。不知道你有没有这样的同事，你问他工作完成了没有，他通常会说基本上完成了，这代表什么，就是没完成嘛。哪怕差0.1都不行，一定要做完、做好，任何事情都是如此。</p>
+<h1 id="六-职场那些事"><a href="#六-职场那些事" class="headerlink" title="六.职场那些事"></a>六.职场那些事</h1><h2 id="1-年轻人第一份工作不要太在乎工资"><a href="#1-年轻人第一份工作不要太在乎工资" class="headerlink" title="1.年轻人第一份工作不要太在乎工资"></a>1.年轻人第一份工作不要太在乎工资</h2><p>几乎没有人是靠第一份工作的工资发财，如果大家能够认清这个现实，就能体会到第一份工作是否多20%的工资是一件毫无意义的事情。</p>
+<p>人的第一份工作很重要，它必须能够帮助你在10年后挣到同龄人或者同班同学3-5倍的收入，必须能够让你快速成长，养成良好的职业习惯，在最短的时间里了解全行业。</p>
+<h2 id="2-职场上的误区"><a href="#2-职场上的误区" class="headerlink" title="2.职场上的误区"></a>2.职场上的误区</h2><p><strong>误区一：工作和职业分不清</strong></p>
+<p>工作时大家谋生的手段，职业是我们一辈子要从事的事业，要选择那些对职业有利的工作</p>
+<p><strong>误区二：把自己仅仅当作一个过客，而不是主人</strong></p>
+<p>很多人都觉得现在自己的工作只是一个跳板，以后要去更好的公司，所以工作就不是那么上心，一旦有了这样的心态，你的成长就很有限</p>
+<p><strong>误区三：被语言暴力激怒后就乱了章法</strong></p>
+<p>工作上被领导或者老板说了几句，心里就很难受，然后就辞职了或者不好好工作了，这都是不成熟的表现。当别人对你实施语言暴力时首先思考一下他说的有没有道理，如果有就改正，没有的话也可以私下和对方沟通，让对方知道你受到伤害了，不然别人以为你没事，下次依然会说你</p>
+<p><strong>误区三：疏于沟通</strong></p>
+<p>只顾埋头做自己的事情，而忘记了与别人的沟通，很多时候一个问题如果大家在一起商量，集思广益，很快就解决，而你选择自己一个人苦思冥想，吃力不讨好</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>读书</category>
+      </categories>
+      <tags>
+        <tag>成长</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT Tag 插件的使用</title>
+    <url>/archives/ae7f7109.html</url>
+    <content><![CDATA[<p>Tag Plugin 是一种使 Hexo 支持特殊样式内容的方法。例如，我们无法在标准 Markdown 中显示具有自定义尺寸的图像。然后我们可以使用标签插件来解决它。 Hexo 有很多可以帮助用户的标签。 Hexo 还具有主题接口，使主题能够创建自己的标签。</p>
+<h2 id="文本居中引用-Centered-Quote"><a href="#文本居中引用-Centered-Quote" class="headerlink" title="文本居中引用 - Centered Quote"></a>文本居中引用 - Centered Quote</h2><p>使用方法：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% cq %}世间所有的相遇，都是久别重逢{% endcq %}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果：</p>
+<blockquote class="blockquote-center">
+            <p>世间所有的相遇，都是久别重逢</p>
+
+          </blockquote>
+
+<h2 id="提示块-Note"><a href="#提示块-Note" class="headerlink" title="提示块 - Note"></a>提示块 - Note</h2><p>使用方法：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% note default %}</span><br><span class="line">default 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note primary %}</span><br><span class="line">primary 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note success %}</span><br><span class="line">success 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note info %}</span><br><span class="line">info 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note warning %}</span><br><span class="line">warning 提示块标签</span><br><span class="line">{% endnote %}</span><br><span class="line"></span><br><span class="line">{% note danger %}</span><br><span class="line">danger 提示块标签</span><br><span class="line">{% endnote %}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>主题配置文件中可以修改风格：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># Note tag (bs-callout).</span><br><span class="line">note:</span><br><span class="line">  # Note tag style values:</span><br><span class="line">  #  - simple    bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span><br><span class="line">  #  - disabled  disable all CSS styles import of note tag.</span><br><span class="line">  # 风格</span><br><span class="line">  style: flat</span><br><span class="line">  # 要不要图标</span><br><span class="line">  icons: true</span><br><span class="line">  # 圆角矩形</span><br><span class="line">  border_radius: 3</span><br><span class="line">  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied to label tag variables. This option can work with disabled note tag.</span><br><span class="line">  light_bg_offset: 0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果：</p>
+<div class="note default">
+            <p>default 提示块标签</p>
+          </div>
+
+<div class="note primary">
+            <p>primary 提示块标签</p>
+          </div>
+
+<div class="note success">
+            <p>success 提示块标签</p>
+          </div>
+
+<div class="note info">
+            <p>info 提示块标签</p>
+          </div>
+
+<div class="note warning">
+            <p>warning 提示块标签</p>
+          </div>
+
+<div class="note danger">
+            <p>danger 提示块标签</p>
+          </div>
+
+<h2 id="标签-Label"><a href="#标签-Label" class="headerlink" title="标签 - Label"></a>标签 - Label</h2><p>使用方法：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% label default@默认 %} {% label primary@主要 %} {% label success@成功 %} {% label info@信息 %} {% label warning@警告 %} {% label danger@危险 %} </span><br><span class="line">{% label success@这是成功的信息%}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果：</p>
+<span class="label default">默认</span> <span class="label primary">主要</span> <span class="label success">成功</span> <span class="label info">信息</span> <span class="label warning">警告</span> <span class="label danger">危险</span> 
+<span class="label success">这是成功的信息</span>
+
+<h2 id="选项卡-Tabs"><a href="#选项卡-Tabs" class="headerlink" title="选项卡 - Tabs"></a>选项卡 - Tabs</h2><p>使用方法：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% tabs tab,1 %} 名字为tab，默认在第1个选项卡，如果是-1则隐藏</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 1** </span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 2**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab A --&gt;</span><br><span class="line">**选项卡 3** 名字为A</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">{% endtabs %}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>主题配置文件：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># Tabs tag</span><br><span class="line">tabs:</span><br><span class="line">  enable: true</span><br><span class="line">  transition:</span><br><span class="line">    tabs: true</span><br><span class="line">    labels: true</span><br><span class="line">  border_radius: 0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果：</p>
+<div class="tabs" id="tab"><ul class="nav-tabs"><li class="tab active"><a href="#tab-1">tab 1</a></li><li class="tab"><a href="#tab-2">tab 2</a></li><li class="tab"><a href="#tab-3">A</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-1"><p><strong>选项卡 1</strong> </p></div><div class="tab-pane" id="tab-2"><p><strong>选项卡 2</strong></p></div><div class="tab-pane" id="tab-3"><p><strong>选项卡 3</strong> 名字为A</p></div></div></div>
+
+<p><strong>选项卡 3</strong> 名字为 A</p>
+<h2 id="按钮-Button"><a href="#按钮-Button" class="headerlink" title="按钮 - Button"></a>按钮 - Button</h2><p>使用方法：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">{% button url, text, icon [class], [title] %}</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>url</code> : 绝对或相对 URL</li>
+<li><code>text</code> : 按钮文字，如果未指定图标则为必须</li>
+<li><code>icon</code> : FontAwesome 图标名称（开头没有’fa-‘）。如果未指定文本，则为必需</li>
+<li><code>[class]</code> : FontAwesome 类：<code>fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5X</code> ，可选参数。</li>
+<li><code>[title]</code> : 鼠标悬停时的工具提示，可选参数。</li>
+</ul>
+<p>注意：最好添加 `` 标签，测试时没加 div，下面显示不完全，加上非常美观。</p>
+<p>一个示例：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">&lt;div&gt;{% button https://wgzblog.cn/ ,首页,home fa-fw,这是五公子的博客首页%}&lt;/div&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>显示效果：</p>
+<div><a class="btn" href="https://wgzblog.cn/ " target="_blank" rel="noopener external nofollow noreferrer" title="这是五公子的个人博客首页">
+            <i class="fa fa-home fa-fw"></i>首页
+          </a></div>
+
+<p>多个按钮居中显示：</p>
+<div class="text-center"><div><a class="btn" href="https://wgzblog.cn/ " target="_blank" rel="noopener external nofollow noreferrer" title="这是五公子的个人博客首页">
+            <i class="fa fa-home fa-fw"></i>首页
+          </a> <a class="btn" href="https://wgzblog.cn/movies/ " target="_blank" rel="noopener external nofollow noreferrer" title="豆瓣电影">
+            <i class="fa fa-film fa-fw"></i>观影
+          </a> <a class="btn" href="https://wgzblog.cn/books/ " target="_blank" rel="noopener external nofollow noreferrer" title="豆瓣读书">
+            <i class="fa fa-book fa-fw"></i>阅读
+          </a></div></div><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT配置个人博客</title>
+    <url>/archives/ae7f7108.html</url>
+    <content><![CDATA[<h1 id="一、安装NexT"><a href="#一、安装NexT" class="headerlink" title="一、安装NexT"></a>一、安装NexT</h1><p>Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 <code>themes</code> 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。</p>
+<h2 id="1-克隆最新版本"><a href="#1-克隆最新版本" class="headerlink" title="1.克隆最新版本"></a>1.克隆最新版本</h2><p>在终端窗口下，定位到 Hexo 站点目录下。使用 <code>Git</code> checkout 代码：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">cd</span> <span class="string">your-hexo-site</span></span><br><span class="line"><span class="string">$</span> <span class="string">git</span> <span class="string">clone</span> <span class="string">https://github.com/iissnan/hexo-theme-next</span> <span class="string">themes/next</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="2-直接下载"><a href="#2-直接下载" class="headerlink" title="2.直接下载"></a>2.直接下载</h2><ol>
+<li>前往 NexT 版本 <a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener external nofollow noreferrer">发布页面</a>。</li>
+<li>选择你所需要的版本，下载 Download 区域下的 Source Code (zip) 到本地。例如，下载 v0.4.0 版本：</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411200230.png" alt=""></p>
+<ol start="3">
+<li>解压所下载的压缩包至站点的 themes 目录下， 并将 解压后的文件夹名称（<code>hexo-theme-next-0.4.0</code>）更改为 <code>next</code>。</li>
+</ol>
+<h1 id="二、启用主题"><a href="#二、启用主题" class="headerlink" title="二、启用主题"></a>二、启用主题</h1><p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 <strong>站点配置文件，Hexo目录下的_config.yml</strong>， 找到 <code>theme</code> 字段，并将其值更改为 <code>next</code>。</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<p>到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 我们最好使用 <code>hexo clean</code> 来清除 Hexo 的缓存。</p>
+<h1 id="三、验证主题"><a href="#三、验证主题" class="headerlink" title="三、验证主题"></a>三、验证主题</h1><p>到此，我们已经设置好了next主题，现在我们需要来验证一下我们的配置是否成功</p>
+<p>首先启动 Hexo 本地站点，并开启调试模式（即加上 <code>--debug</code>），整个命令是 <code>hexo s --debug</code>。 在服务启动的过程，注意观察命令行输出是否有任何异常信息，如果你碰到问题，这些信息将帮助他人更好的定位错误。 当命令行输出中提示出：</p>
+<figure class="highlight java"><table><tbody><tr><td class="code"><pre><span class="line">INFO  Hexo is running at http:<span class="comment">//0.0.0.0:4000/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时即可使用浏览器访问 <code>http://localhost:4000</code>，检查站点是否正确运行。</p>
+<blockquote>
+<p>当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411201330.png" alt=""></p>
+<h1 id="四、主题设置"><a href="#四、主题设置" class="headerlink" title="四、主题设置"></a>四、主题设置</h1><h2 id="1-选择Scheme"><a href="#1-选择Scheme" class="headerlink" title="1.选择Scheme"></a>1.选择Scheme</h2><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持三种 Scheme，他们是：</p>
+<ul>
+<li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
+<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
+<li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
+</ul>
+<p>Scheme 的切换通过更改 <strong>主题配置文件</strong>，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 <code>#</code> 去除即可。</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Muse</span>   <span class="comment">#</span></span><br><span class="line"><span class="comment"># scheme: Mist     #菜单横着排列 菜单在上面</span></span><br><span class="line"><span class="comment"># scheme: Pisces     #菜单在左边</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-设置语言"><a href="#2-设置语言" class="headerlink" title="2.设置语言"></a>2.设置语言</h2><p>编辑 <strong>站点配置文件</strong>， 将 <code>language</code> 设置成你所需要的语言。建议明确设置你所需要的语言，例如选用简体中文，配置如下：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-Cn</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>目前 NexT 支持的语言如以下表格所示：</p>
+<table>
+<thead>
+<tr>
+<th align="left">语言</th>
+<th align="left">代码</th>
+<th align="left">设定示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">English</td>
+<td align="left"><code>en</code></td>
+<td align="left"><code>language: en</code></td>
+</tr>
+<tr>
+<td align="left">简体中文</td>
+<td align="left"><code>zh-Cn</code></td>
+<td align="left"><code>language: zh-Cn</code></td>
+</tr>
+<tr>
+<td align="left">Français</td>
+<td align="left"><code>fr-FR</code></td>
+<td align="left"><code>language: fr-FR</code></td>
+</tr>
+<tr>
+<td align="left">Português</td>
+<td align="left"><code>pt</code></td>
+<td align="left"><code>language: pt</code> or <code>language: pt-BR</code></td>
+</tr>
+<tr>
+<td align="left">繁體中文</td>
+<td align="left"><code>zh-hk</code> 或者 <code>zh-tw</code></td>
+<td align="left"><code>language: zh-hk</code></td>
+</tr>
+<tr>
+<td align="left">Русский язык</td>
+<td align="left"><code>ru</code></td>
+<td align="left"><code>language: ru</code></td>
+</tr>
+<tr>
+<td align="left">Deutsch</td>
+<td align="left"><code>de</code></td>
+<td align="left"><code>language: de</code></td>
+</tr>
+<tr>
+<td align="left">日本語</td>
+<td align="left"><code>ja</code></td>
+<td align="left"><code>language: ja</code></td>
+</tr>
+<tr>
+<td align="left">Indonesian</td>
+<td align="left"><code>id</code></td>
+<td align="left"><code>language: id</code></td>
+</tr>
+<tr>
+<td align="left">Korean</td>
+<td align="left"><code>ko</code></td>
+<td align="left"><code>language: ko</code></td>
+</tr>
+</tbody></table>
+<h2 id="3-设置菜单"><a href="#3-设置菜单" class="headerlink" title="3.设置菜单"></a>3.设置菜单</h2><p>菜单配置包括三个部分，第一是菜单项（名称和链接），第二是菜单项的显示文本，第三是菜单项对应的图标。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="noopener external nofollow noreferrer">Font Awesome</a> 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。</p>
+<p>编辑 <strong>主题配置文件</strong>，修改以下内容：</p>
+<p>①、设定菜单内容，对应的字段是 <code>menu</code>。 菜单内容的设置格式是：<code>item name: link</code>。其中 <code>item name</code>是一个名称，这个名称并不直接显示在页面上，她将用于匹配图标以及翻译。</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>若你的站点运行在子目录中，请将链接前缀的 <code>/</code> 去掉</p>
+<p>NexT 默认的菜单项有（标注 的项表示需要手动创建这个页面）：</p>
+<table>
+<thead>
+<tr>
+<th align="left">键值</th>
+<th align="left">设定值</th>
+<th align="left">显示文本（简体中文）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">home</td>
+<td align="left"><code>home: /</code></td>
+<td align="left">主页</td>
+</tr>
+<tr>
+<td align="left">archives</td>
+<td align="left"><code>archives: /archives</code></td>
+<td align="left">归档页</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td align="left"><code>categories: /categories</code></td>
+<td align="left">分类页</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left"><code>tags: /tags</code></td>
+<td align="left">标签页</td>
+</tr>
+<tr>
+<td align="left">about</td>
+<td align="left"><code>about: /about</code></td>
+<td align="left">关于页面</td>
+</tr>
+<tr>
+<td align="left">commonweal</td>
+<td align="left"><code>commonweal: /404.html</code></td>
+<td align="left">公益 404</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：设置菜单时记得在Hexo的source目录下创建相对应的目录，否则会出现</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411210224.png" alt=""></p>
+<p>比如要创建标签文件夹，终端中输入（前提在<strong>Hexo</strong>文件路径下）：</p>
+<figure class="highlight jsx"><table><tbody><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"tags"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建完目录后的页面再次打开是这样的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205415.png" alt=""></p>
+<p>编辑<code>Blog/source/categories</code>中<strong>index.md</strong>文件，添加<code>type: "categories"</code>，其他Menu也同理创建。</p>
+<p>添加type后的页面是这样的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200411205544.png" alt=""></p>
+</blockquote>
+<p>②、设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。</p>
+<p>以简体中文为例，若你需要添加一个菜单项，比如 <code>something</code>。那么就需要修改简体中文对应的翻译文件 <code>languages/zh-Cn.yml</code>，在 <code>menu</code> 字段下添加一项：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">首页</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">归档</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">分类</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">标签</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">关于</span></span><br><span class="line">  <span class="attr">search:</span> <span class="string">搜索</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">公益404</span></span><br><span class="line">  <span class="attr">something:</span> <span class="string">有料</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>③、设定菜单项的图标，对应的字段是 menu。 <code>||</code>后面的这是图标名称，<code>icon name</code> 是 <a href="http://fontawesome.io/" target="_blank" rel="noopener external nofollow noreferrer">Font Awesome</a> 图标的 名字。而 menu_settings中<code>icons</code> 可用于控制是否显示图标，你可以设置成 <code>false</code> 来去掉图标。</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span>  <span class="comment">#首页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span>  <span class="comment">#关于</span></span><br><span class="line">  <span class="comment"># tags: /tags/ || fa fa-tags  #标签</span></span><br><span class="line">  <span class="comment"># categories: /categories/ || fa fa-th #分类</span></span><br><span class="line">  <span class="comment"># archives: /archives/ || fa fa-archive  #归档</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar #日程表</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap #站点地图</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat  # 404页面</span></span><br><span class="line"><span class="attr">menu_settings:</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">badges:</span> <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p> 在菜单图标开启的情况下，如果菜单项与菜单未匹配（没有设置或者无效的 Font Awesome 图标名字） 的情况下，NexT 将会使用 作为图标。</p>
+<p> 请注意键值（如 <code>home</code>）的大小写要严格匹配</p>
+</blockquote>
+<h2 id="4-设置侧栏"><a href="#4-设置侧栏" class="headerlink" title="4.设置侧栏"></a>4.设置侧栏</h2><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示，并放置于右侧位置。 可以通过修改 <strong>主题配置文件</strong> 中的 <code>sidebar</code> 字段来控制侧栏的行为。侧栏的设置包括两个部分，其一是侧栏的位置， 其二是侧栏显示的时机。</p>
+<p>①、设置侧栏的位置，修改 <code>sidebar.position</code> 的值，支持的选项有：</p>
+<ul>
+<li>left - 靠左放置</li>
+<li>right - 靠右放置</li>
+</ul>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">left</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>②、设置侧栏显示的时机，修改 <code>sidebar.display</code> 的值，支持的选项有：</p>
+<ul>
+<li><code>post</code> - 默认行为，在文章页面（拥有目录列表）时显示</li>
+<li><code>always</code> - 在所有页面中都显示</li>
+<li><code>hide</code> - 在所有页面中都隐藏（可以手动展开）</li>
+<li><code>remove</code> - 完全移除</li>
+</ul>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">sidebar:</span></span><br><span class="line">  <span class="attr">display:</span> <span class="string">post</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="5-设置头像"><a href="#5-设置头像" class="headerlink" title="5.设置头像"></a>5.设置头像</h2><p>编辑 <strong>主题配置文件</strong>， 修改字段 <code>avatar</code>， 值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
+<table>
+<thead>
+<tr>
+<th align="left">地址</th>
+<th align="left">值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">完整的互联网 URI</td>
+<td align="left"><code>http://example.com/avatar.png</code></td>
+</tr>
+<tr>
+<td align="left">站点内的地址</td>
+<td align="left">将头像放置主题目录下的 <code>source/uploads/</code> （新建 uploads 目录若不存在） 配置为：<code>avatar: /uploads/avatar.png</code>或者 放置在 <code>source/images/</code> 目录下 配置为：<code>avatar: /images/avatar.png</code></td>
+</tr>
+</tbody></table>
+<p>头像设置示例</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">avatar:</span> <span class="string">http://example.com/avatar.png</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="6-设置作者昵称"><a href="#6-设置作者昵称" class="headerlink" title="6.设置作者昵称"></a>6.设置作者昵称</h2><p>编辑 <strong>站点配置文件</strong>， 设置 <code>author</code> 为你的昵称。</p>
+<h2 id="7-站点描述"><a href="#7-站点描述" class="headerlink" title="7.站点描述"></a>7.站点描述</h2><p>编辑 <strong>站点配置文件</strong>， 设置 <code>description</code> 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/archives/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener external nofollow noreferrer">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener external nofollow noreferrer">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener external nofollow noreferrer">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener external nofollow noreferrer">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener external nofollow noreferrer">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener external nofollow noreferrer">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener external nofollow noreferrer">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener external nofollow noreferrer">Deployment</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
   </entry>
 </search>
