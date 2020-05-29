@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.wgzblog.cn/"/>
-  <updated>2020-05-10T03:51:11.299Z</updated>
+  <updated>2020-05-29T13:19:44.527Z</updated>
   <id>https://www.wgzblog.cn/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vmware安装CentOS6</title>
+    <link href="https://www.wgzblog.cn/archives/7e2030ff.html"/>
+    <id>https://www.wgzblog.cn/archives/7e2030ff.html</id>
+    <published>2020-05-29T21:15:56.000Z</published>
+    <updated>2020-05-29T13:19:44.527Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、创建新的虚拟机，选择典型，点击下一步 &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200529092828.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;2、选择稍后安装虚拟机系统&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200529094157.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;3、选择Linux系统及版本&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://www.wgzblog.cn/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="软件" scheme="https://www.wgzblog.cn/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL Explain详解</title>
+    <link href="https://www.wgzblog.cn/archives/2db69901.html"/>
+    <id>https://www.wgzblog.cn/archives/2db69901.html</id>
+    <published>2020-05-21T09:47:04.000Z</published>
+    <updated>2020-05-21T01:51:31.408Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上图是使用Explain分析的一条sql语句，下面我们来看一下各个字段的具体含义是什么&lt;/p&gt;
+&lt;p&gt;expain出来的信息有10列，分别是id、select_type、table、type、possible_keys、key、key_len、ref、rows、Extra,下面对这些字段出现的可能进行解释：&lt;/p&gt;
+&lt;h1 id=&quot;一、-id&quot;&gt;&lt;a href=&quot;#一、-id&quot; class=&quot;headerlink&quot; title=&quot;一、 id&quot;&gt;&lt;/a&gt;一、 id&lt;/h1&gt;&lt;p&gt;   &lt;strong&gt;SQL执行的顺序的标识,SQL从大到小的执行&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;id相同时，执行顺序由上至下&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果是子查询，id的序号会递增，id值越大优先级越高，越先被执行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;id如果相同，可以认为是一组，从上往下顺序执行；在所有组中，id值越大，优先级越高，越先执行&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="https://www.wgzblog.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="MySQL" scheme="https://www.wgzblog.cn/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>一文读懂Redis</title>
