@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CentOS6下安装jdk、mysql、redis</title>
+    <url>/archives/56a2a193.html</url>
+    <content><![CDATA[<h1 id="CentOS6安装jdk"><a href="#CentOS6安装jdk" class="headerlink" title="CentOS6安装jdk"></a>CentOS6安装jdk</h1><h2 id="1-检测是否安装了jdk"><a href="#1-检测是否安装了jdk" class="headerlink" title="1.检测是否安装了jdk"></a>1.检测是否安装了jdk</h2><p>查看centos自带的jdk，如果没有查询到则不用卸载，直接开始下面的安装过程</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">java –version</span><br><span class="line">rpm -qa | grep java</span><br></pre></td></tr></tbody></table></figure>
+
+<p>卸载自带的jdk</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">rpm -e --nodeps java-1.7.0-openjdk-1.7.0.45-2.4.3.3.el6.x86_64</span><br><span class="line">rpm -e --nodeps java-1.6.0-openjdk-1.6.0.0-1.66.1.13.0.el6.x86_64</span><br><span class="line">#  rpm -e --nodeps后面的参数就是刚才rpm -qa查询出来的结果</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-安装jdk"><a href="#2-安装jdk" class="headerlink" title="2.安装jdk"></a>2.安装jdk</h2><p>第一步：</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">mkdir /usr/local/src/jdk #创建jdk文件夹</span><br><span class="line">cd /usr/local/src/jdk</span><br><span class="line">tar -xvf jdk-7u71-linux-i586.tar.gz # 将jdk安装包上传到当前目录然后进行解压</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第二步：</p>
+<p>配置环境变量</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></tbody></table></figure>
+
+<p>在末尾添加</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">#set java environment</span><br><span class="line">JAVA_HOME=/usr/local/src/java/jdk1.7.0_71  </span><br><span class="line">CLASSPATH=.:$JAVA_HOME/lib.tools.jar</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">export JAVA_HOME CLASSPATH PATH</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中JAVA_HOME目录是你jdk解压后文件的目录，记得修改成自己的目录</p>
+<p>修改完保存退出</p>
+<p>第三步：</p>
+<p>使更改的配置立即生效</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></tbody></table></figure>
+
+<p>最后利用java -version命令 查看JDK版本信息，如果显示出1.7.0证明成功</p>
+<h1 id="CentOS6安装mysql"><a href="#CentOS6安装mysql" class="headerlink" title="CentOS6安装mysql"></a>CentOS6安装mysql</h1><h2 id="1-检测是否安装了mysql"><a href="#1-检测是否安装了mysql" class="headerlink" title="1.检测是否安装了mysql"></a>1.检测是否安装了mysql</h2><figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">rpm -qa | grep mysql</span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果已经安装了，将其卸载，如：</p>
+ <figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">rpm -e --nodeps mysql-libs-5.1.71-1.el6.x86_64 </span><br><span class="line"># 后面的mysql替换成你查询出来的结果</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-安装mysql"><a href="#2-安装mysql" class="headerlink" title="2.安装mysql"></a>2.安装mysql</h2><figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">mkdir /usr/local/src/mysql</span><br><span class="line">cd /usr/local/src/mysql</span><br><span class="line">tar -xvf MySQL-5.6.22-1.el6.i686.rpm-bundle.tar</span><br></pre></td></tr></tbody></table></figure>
+
+<p>一、安装server</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed//image/20200530175231.png" alt=""></p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">rpm -ivh MySQL-server-5.6.22-1.el6.i686.rpm</span><br></pre></td></tr></tbody></table></figure>
+
+<p>二、安装client</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">rpm -ivh MySQL-client-5.6.22-1.el6.i686.rpm</span><br></pre></td></tr></tbody></table></figure>
+
+<p>三、启动mysql</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></tbody></table></figure>
+
+<p>四、登录mysql</p>
+<p>首先查看mysql的默认密码，然后登录</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">cat /root/.mysql_secret</span><br><span class="line">mysql -uroot -p***  # 其中***是你刚才查出的密码</span><br></pre></td></tr></tbody></table></figure>
+
+<p>登录进去后修改密码</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">SET PASSWORD = PASSWORD('123456');</span><br></pre></td></tr></tbody></table></figure>
+
+<p>五、开启远程访问</p>
+<p>此时的mysql已经可以在centos上面使用了，但是如果想要远程访问还需要进行一些设置</p>
+<p>设置远程访问（使用root密码）：</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">grant all privileges on *.* to 'root' @'%' identified by '123456'; </span><br><span class="line">flush privileges;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>防火墙打开3306端口</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 3306 -j ACCEPT</span><br><span class="line">/etc/rc.d/init.d/iptables save</span><br><span class="line">/etc/init.d/iptables status</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="CentOS6安装redis"><a href="#CentOS6安装redis" class="headerlink" title="CentOS6安装redis"></a>CentOS6安装redis</h1><h2 id="1-安装gcc"><a href="#1-安装gcc" class="headerlink" title="1.安装gcc"></a>1.安装gcc</h2><figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-安装redis"><a href="#2-安装redis" class="headerlink" title="2.安装redis"></a>2.安装redis</h2><p>第一步：下载redis</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-3.0.4.tar.gz</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第二步：解压刚才下载的文件</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">tar -zxvf redis-3.0.4.tar.gz</span><br></pre></td></tr></tbody></table></figure>
+
+<p>第三步：编译安装</p>
+<p>切换到程序目录</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">cd redis-3.0.4</span><br><span class="line">make</span><br></pre></td></tr></tbody></table></figure>
+
+<p>执行安装命令，安装到/usr/local/redis目录（这里的目录你可以自己选择，也可以不填）</p>
+<figure class="highlight xml"><table><tbody><tr><td class="code"><pre><span class="line">make PREFIX=/usr/local/redis install</span><br></pre></td></tr></tbody></table></figure>
+
+<p>到此redis安装完成，安装好的redis如何没有redis.conf配置文件，那么你去刚才解压好的redis安装包里面找，然后复制到redis bin目录下即可。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vmware安装CentOS6</title>
     <url>/archives/7e2030ff.html</url>
     <content><![CDATA[<p>1、创建新的虚拟机，选择典型，点击下一步 </p>

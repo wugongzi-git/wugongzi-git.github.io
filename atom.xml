@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.wgzblog.cn/"/>
-  <updated>2020-05-29T13:19:44.527Z</updated>
+  <updated>2020-05-30T10:15:57.289Z</updated>
   <id>https://www.wgzblog.cn/</id>
   
   <author>
@@ -17,19 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CentOS6下安装jdk、mysql、redis</title>
+    <link href="https://www.wgzblog.cn/archives/56a2a193.html"/>
+    <id>https://www.wgzblog.cn/archives/56a2a193.html</id>
+    <published>2020-05-30T18:15:13.000Z</published>
+    <updated>2020-05-30T10:15:57.289Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;CentOS6安装jdk&quot;&gt;&lt;a href=&quot;#CentOS6安装jdk&quot; class=&quot;headerlink&quot; title=&quot;CentOS6安装jdk&quot;&gt;&lt;/a&gt;CentOS6安装jdk&lt;/h1&gt;&lt;h2 id=&quot;1-检测是否安装了jdk&quot;&gt;&lt;a href=&quot;#1-检测是否安装了jdk&quot; class=&quot;headerlink&quot; title=&quot;1.检测是否安装了jdk&quot;&gt;&lt;/a&gt;1.检测是否安装了jdk&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://www.wgzblog.cn/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Linux" scheme="https://www.wgzblog.cn/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vmware安装CentOS6</title>
     <link href="https://www.wgzblog.cn/archives/7e2030ff.html"/>
     <id>https://www.wgzblog.cn/archives/7e2030ff.html</id>
     <published>2020-05-29T21:15:56.000Z</published>
-    <updated>2020-05-29T13:19:44.527Z</updated>
+    <updated>2020-05-29T13:20:04.096Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;1、创建新的虚拟机，选择典型，点击下一步 &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200529092828.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;2、选择稍后安装虚拟机系统&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200529094157.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;3、选择Linux系统及版本&lt;/p&gt;
     
     </summary>
     
@@ -46,21 +64,12 @@
     <link href="https://www.wgzblog.cn/archives/2db69901.html"/>
     <id>https://www.wgzblog.cn/archives/2db69901.html</id>
     <published>2020-05-21T09:47:04.000Z</published>
-    <updated>2020-05-21T01:51:31.408Z</updated>
+    <updated>2020-05-29T13:20:04.098Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;上图是使用Explain分析的一条sql语句，下面我们来看一下各个字段的具体含义是什么&lt;/p&gt;
 &lt;p&gt;expain出来的信息有10列，分别是id、select_type、table、type、possible_keys、key、key_len、ref、rows、Extra,下面对这些字段出现的可能进行解释：&lt;/p&gt;
-&lt;h1 id=&quot;一、-id&quot;&gt;&lt;a href=&quot;#一、-id&quot; class=&quot;headerlink&quot; title=&quot;一、 id&quot;&gt;&lt;/a&gt;一、 id&lt;/h1&gt;&lt;p&gt;   &lt;strong&gt;SQL执行的顺序的标识,SQL从大到小的执行&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;id相同时，执行顺序由上至下&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;如果是子查询，id的序号会递增，id值越大优先级越高，越先被执行&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;id如果相同，可以认为是一组，从上往下顺序执行；在所有组中，id值越大，优先级越高，越先执行&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
     
     </summary>
     
@@ -81,8 +90,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;NoSQL概述&quot;&gt;&lt;a href=&quot;#NoSQL概述&quot; class=&quot;headerlink&quot; title=&quot;NoSQL概述&quot;&gt;&lt;/a&gt;NoSQL概述&lt;/h1&gt;&lt;h2 id=&quot;一-数据存储的演化史&quot;&gt;&lt;a href=&quot;#一-数据存储的演化史&quot; class=&quot;headerlink&quot; title=&quot;一.数据存储的演化史&quot;&gt;&lt;/a&gt;一.数据存储的演化史&lt;/h2&gt;&lt;h3 id=&quot;1-单机MySQL的美好年代&quot;&gt;&lt;a href=&quot;#1-单机MySQL的美好年代&quot; class=&quot;headerlink&quot; title=&quot;1.单机MySQL的美好年代&quot;&gt;&lt;/a&gt;1.单机MySQL的美好年代&lt;/h3&gt;&lt;p&gt;在90年代，一个网站的访问量一般都不大，用单个数据库完全可以轻松应付。在那个时候，更多的都是静态网页，动态交互类型的网站不多。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/wugongzi-git/BlogFigurebed/image/20200430102019.png&quot; alt&gt;&lt;/p&gt;
+      &lt;h1 id=&quot;NoSQL概述&quot;&gt;&lt;a href=&quot;#NoSQL概述&quot; class=&quot;headerlink&quot; title=&quot;NoSQL概述&quot;&gt;&lt;/a&gt;NoSQL概述&lt;/h1&gt;&lt;h2 id=&quot;一-数据存储的演化史&quot;&gt;&lt;a href=&quot;#一-数据存储的演化史&quot; class=&quot;headerlink&quot; title=&quot;一.数据存储的演化史&quot;&gt;&lt;/a&gt;一.数据存储的演化史&lt;/h2&gt;
     
     </summary>
     
@@ -106,8 +114,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;这周用了两天的时间读完了吴军老师的《见识》，里面有很多对于人生非常好的建议，拿出来与大家一同分享&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;一-幸福是目的，成功是手段&quot;&gt;&lt;a href=&quot;#一-幸福是目的，成功是手段&quot; class=&quot;headerlink&quot; title=&quot;一.幸福是目的，成功是手段&quot;&gt;&lt;/a&gt;一.幸福是目的，成功是手段&lt;/h1&gt;&lt;h2 id=&quot;1-人生是一条河&quot;&gt;&lt;a href=&quot;#1-人生是一条河&quot; class=&quot;headerlink&quot; title=&quot;1.人生是一条河&quot;&gt;&lt;/a&gt;1.人生是一条河&lt;/h2&gt;&lt;p&gt;人生就像是一条河，决定这条河能存放多少水不仅仅取决于河流的长度，还有河流的穿度和深度。人生的长度虽不固定，但每个人也都相差无几，那么想要人生活的更加精彩就需要拓宽我们的宽度，挖掘我们的深度。&lt;/p&gt;
-&lt;h2 id=&quot;2-给三本学生的建议&quot;&gt;&lt;a href=&quot;#2-给三本学生的建议&quot; class=&quot;headerlink&quot; title=&quot;2.给三本学生的建议&quot;&gt;&lt;/a&gt;2.给三本学生的建议&lt;/h2&gt;
+&lt;h1 id=&quot;一-幸福是目的，成功是手段&quot;&gt;&lt;a href=&quot;#一-幸福是目的，成功是手段&quot; class=&quot;headerlink&quot; title=&quot;一.幸福是目的，成功是手段&quot;&gt;&lt;/a&gt;一.幸福是目的，成功是手段&lt;/h1&gt;
     
     </summary>
     
@@ -129,10 +136,7 @@
     <summary type="html">
     
       &lt;p&gt;Tag Plugin 是一种使 Hexo 支持特殊样式内容的方法。例如，我们无法在标准 Markdown 中显示具有自定义尺寸的图像。然后我们可以使用标签插件来解决它。 Hexo 有很多可以帮助用户的标签。 Hexo 还具有主题接口，使主题能够创建自己的标签。&lt;/p&gt;
-&lt;h2 id=&quot;文本居中引用-Centered-Quote&quot;&gt;&lt;a href=&quot;#文本居中引用-Centered-Quote&quot; class=&quot;headerlink&quot; title=&quot;文本居中引用 - Centered Quote&quot;&gt;&lt;/a&gt;文本居中引用 - Centered Quote&lt;/h2&gt;&lt;p&gt;使用方法：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;{% cq %}世间所有的相遇，都是久别重逢{% endcq %}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;显示效果：&lt;/p&gt;
+&lt;h2 id=&quot;文本居中引用-Centered-Quote&quot;&gt;&lt;a href=&quot;#文本居中引用-Centered-Quote&quot; class=&quot;headerlink&quot; title=&quot;文本居中引用 - Centered Quote&quot;&gt;&lt;/a&gt;文本居中引用 - Centered Quote&lt;/h2&gt;
     
     </summary>
     
@@ -154,8 +158,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;一、安装NexT&quot;&gt;&lt;a href=&quot;#一、安装NexT&quot; class=&quot;headerlink&quot; title=&quot;一、安装NexT&quot;&gt;&lt;/a&gt;一、安装NexT&lt;/h1&gt;&lt;p&gt;Hexo 安装主题的方式非常简单，只需要将主题文件拷贝至站点目录的 &lt;code&gt;themes&lt;/code&gt; 目录下， 然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。&lt;/p&gt;
-&lt;h2 id=&quot;1-克隆最新版本&quot;&gt;&lt;a href=&quot;#1-克隆最新版本&quot; class=&quot;headerlink&quot; title=&quot;1.克隆最新版本&quot;&gt;&lt;/a&gt;1.克隆最新版本&lt;/h2&gt;&lt;p&gt;在终端窗口下，定位到 Hexo 站点目录下。使用 &lt;code&gt;Git&lt;/code&gt; checkout 代码：&lt;/p&gt;
-&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;your-hexo-site&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;https://github.com/iissnan/hexo-theme-next&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;themes/next&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -177,9 +179,7 @@
     <summary type="html">
     
       &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener external nofollow noreferrer&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;
     
     </summary>
     

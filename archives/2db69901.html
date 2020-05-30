@@ -30,15 +30,15 @@
 
 
 
-  <meta name="description" content="上图是使用Explain分析的一条sql语句，下面我们来看一下各个字段的具体含义是什么 expain出来的信息有10列，分别是id、select_type、table、type、possible_keys、key、key_len、ref、rows、Extra,下面对这些字段出现的可能进行解释： 一、 id   SQL执行的顺序的标识,SQL从大到小的执行  id相同时，执行顺序由上至下  如果是子">
+  <meta name="description" content="上图是使用Explain分析的一条sql语句，下面我们来看一下各个字段的具体含义是什么 expain出来的信息有10列，分别是id、select_type、table、type、possible_keys、key、key_len、ref、rows、Extra,下面对这些字段出现的可能进行解释：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL Explain详解">
 <meta property="og:url" content="https://www.wgzblog.cn/archives/2db69901.html">
 <meta property="og:site_name" content="说故事的五公子">
-<meta property="og:description" content="上图是使用Explain分析的一条sql语句，下面我们来看一下各个字段的具体含义是什么 expain出来的信息有10列，分别是id、select_type、table、type、possible_keys、key、key_len、ref、rows、Extra,下面对这些字段出现的可能进行解释： 一、 id   SQL执行的顺序的标识,SQL从大到小的执行  id相同时，执行顺序由上至下  如果是子">
+<meta property="og:description" content="上图是使用Explain分析的一条sql语句，下面我们来看一下各个字段的具体含义是什么 expain出来的信息有10列，分别是id、select_type、table、type、possible_keys、key、key_len、ref、rows、Extra,下面对这些字段出现的可能进行解释：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-21T09:47:04.000Z">
-<meta property="article:modified_time" content="2020-05-21T01:51:31.408Z">
+<meta property="article:modified_time" content="2020-05-29T13:20:04.098Z">
 <meta property="article:author" content="wugongzi">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
@@ -159,7 +159,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -169,7 +169,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-movies">
@@ -567,7 +567,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -580,7 +580,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -649,7 +649,7 @@
             <!-- <h3 class="widget-title">Tag Cloud</h3> -->
             <div id="myCanvasContainer" class="widget tagcloud">
                 <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%90%E9%95%BF/" rel="tag">成长</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a><span class="tag-list-count">1</span></li></ul>
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%88%90%E9%95%BF/" rel="tag">成长</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a><span class="tag-list-count">1</span></li></ul>
                 </canvas>
             </div>
         </div>
@@ -953,13 +953,13 @@ if(canvas.getContext){
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">63k</span>
+    <span title="站点总字数">65k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">57 分钟</span>
+    <span title="站点阅读时长">59 分钟</span>
 </div>
  
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
